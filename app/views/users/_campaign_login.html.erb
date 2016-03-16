@@ -1,0 +1,4 @@
+<%= form_for @user, :html => {novalidate: false, class: "form-inline", class: "add_user", id: "existing_user"}, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :email, :placeholder => "Enter your email", :class => "email form-inline" %>
+  <input class="form-group submit" name="commit" type="submit" value="SIGN IN" />
+<% end %>

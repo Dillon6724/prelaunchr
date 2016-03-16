@@ -1,18 +1,6 @@
-<!-- <div class="hero">
-  <p class="large brandon">Harry&#8217;s is live</p>
-  <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
-</div>
-
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-  <% if Rails.application.config.ended %>
-    <%= render "users/campaign_ended" %>
-  <% else %>
-    <%= render "users/campaign_ongoing" %>
-  <% end %>
-</div> -->
-
 <section id='main'>
   <div class='verily_logo'>
+    <%= image_tag "verily_logo.png" %>
     <p class='vip'>vip</p>
   </div>
   <div class='cover'>
@@ -21,16 +9,22 @@
       <h3 class='cover-subtitle'>Become a VIP—“Verily Important Person”— to get the inside scoop on all things Verily, refer your friends to earn beautiful Verily swag, and join an awesome community of women striving to be the best versions of themselves.</h3>
     </div>
     <div class='signup_forms'>
-      <div class='signup_form_wrapper'>
-        <p class='ready'>Ready to Join?</p>
-        <div id='form-wrapper_1'>
+      <% if Rails.application.config.ended %>
+        <%= render "users/campaign_ended" %>
+      <% else %>
+        <div class='signup_form_wrapper'>
+          <p class='ready'>Ready to Join?</p>
+          <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
+            <%= render "users/campaign_ongoing" %>
+          </div>
         </div>
-      </div>
-      <div class='signup_form_wrapper'>
-        <p class='ready'>Already a VIP?</p>
-        <div id='form-wrapper_2'>
+        <div class='signup_form_wrapper'>
+          <p class='ready'>Already a VIP?</p>
+          <div id='form-wrapper_2'>
+            <%= render "users/campaign_login" %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
     <div class='find_out_more'>FIND OUT MORE?</div>
   </div>
