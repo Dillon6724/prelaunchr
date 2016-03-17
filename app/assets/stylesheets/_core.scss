@@ -16,55 +16,7 @@ form{
 /* Home */
 
 html.home{
-	background: #EDECEA;
-}
-
-#home{
-	// padding-bottom: 50px;
-}
-
-#home .page-content{
-	width: 1400px;
-	margin: 0 auto;
-}
-
-#home .form-wrap{
-	height: 80px;
-	width: 411px;
-	margin: 23px auto 0;
-}
-
-#home .form-wrap .byline{
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #074E6F;
-	text-align: center;
-	font-weight: bold;
-	letter-spacing: 2px;
-	margin: 15px 0;
-}
-
-#home .form-wrap .email{
-	float: left;
-	font-size: 13px;
-	padding: 8px 0 8px 10px;
-	border: 1px solid #074E6F;
-	width: 256px;
-	outline: none;
-	letter-spacing: 1px;
-}
-
-#home .form-wrap .submit{
-	width: 143px;
-	background: #074E6F;
-	float: left;
-	height: 37px;
-	line-height: 37px;
-	color: #FFF;
-	font-size: 13px;
-	text-transform: uppercase;
-	border: 0;
-	letter-spacing: 2px;
+	background-color: white;
 }
 
 #home .form-wrap.ended{

@@ -224,16 +224,16 @@
 .add_user {
 	width: auto;
 	padding: 0px;
-	display: inline-block;
+	display: inline;
 	border: medium none;
 }
 
-.add_user .form-group{
-	display: inline-block;
+.add_user .form-inline{
+	display: inline;
   height: 28px;
 }
 
-.add_user .form-control{
+.add_user .email{
 	height: 28px;
   line-height: 28px;
 	border-radius: 0px;
@@ -241,7 +241,7 @@
 	font-size: 13px;
 	width: 100%;
 	float: left;
-	display: inline-block;
+	display: inline;
   min-height: 28px !important;
   input {
     height: 28px;
@@ -250,7 +250,7 @@
   }
 }
 
-.add_user .form-control::-webkit-input-placeholder {
+.add_user .email::-webkit-input-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -260,7 +260,7 @@
    background-color: none;
 }
 
-.add_user .form-control::placeholder {
+.add_user .email::placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -270,7 +270,7 @@
    background-color: none;
 }
 
-.add_user .form-control::-ms-input-placeholder {
+.add_user .email::-ms-input-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -280,7 +280,7 @@
    background-color: none;
 }
 
-.add_user .form-control::-moz-placeholder {
+.add_user .email::-moz-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -288,6 +288,21 @@
    opacity: 1 !important;
    color: black;
    background-color: none;
+}
+.add_user .submit {
+    height: 28px;
+    width: 70px;
+    border-radius: 0px;
+    border: 1px solid black;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background-color: #182343;
+    color: #FFF;
+    font-family: "proxima-nova", sans-serif;
+    float: right;
+    display: inline;
 }
 
 .find_out_more {
@@ -303,23 +318,6 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
-}
-
-.add_user .btn {
-    height: 28px;
-    width: 70px;
-    border-radius: 0px;
-    border: 1px solid black;
-    line-height: 12px;
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    width: 100%;
-    background-color: #182343;
-    color: #FFF;
-    font-family: "proxima-nova", sans-serif;
-    float: right;
-    display: inline-block;
 }
 
 .cover small{
