@@ -120,6 +120,8 @@
   }
 }
 
+form, form div, input { display: inline; }
+
 .cover-title{
 	font-size: 36px;
 	color: black;
@@ -186,6 +188,7 @@
 }
 
 .signup_form_wrapper {
+  width: 300px;
   display: inline-block;
   margin-right: 46px;
   @media screen and (max-width: 1023px){
@@ -214,11 +217,12 @@
 }
 
 .ready {
-  font-weight: 500;
+  font-weight: 400;
   font-family: "proxima-nova", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .add_user {
@@ -234,17 +238,17 @@
 }
 
 .add_user .email{
-	height: 28px;
-  line-height: 28px;
+	height: 26px;
+  line-height: 26px;
 	border-radius: 0px;
   border: 1px solid black;
 	font-size: 13px;
-	width: 100%;
+	width: 200px;
 	float: left;
 	display: inline;
-  min-height: 28px !important;
+  padding: 0;
   input {
-    height: 28px;
+    height: 26px;
     padding: 0 !important;
     min-height: none !important;
   }
@@ -289,9 +293,10 @@
    color: black;
    background-color: none;
 }
+
 .add_user .submit {
     height: 28px;
-    width: 70px;
+    width: 80px;
     border-radius: 0px;
     border: 1px solid black;
     line-height: 12px;
@@ -317,6 +322,9 @@
     background-color: #ebebeb;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
