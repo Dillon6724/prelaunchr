@@ -46,6 +46,9 @@ class UsersController < ApplicationController
   def policy
   end
 
+  def faq
+  end
+
   def redirect
     redirect_to root_path, status: 404
   end
