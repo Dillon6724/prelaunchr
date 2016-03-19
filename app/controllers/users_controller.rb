@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_filter :skip_first_page, only: :new
-  before_filter :handle_ip, only: :create
+
+  # will need to uncomment this method before launching in production
+  # before_filter :handle_ip, only: :create
 
   def new
     @bodyId = 'home'
@@ -17,6 +19,7 @@ class UsersController < ApplicationController
     ref_code = cookies[:h_ref]
     email = params[:user][:email]
     @user = User.new(email: email)
+    cookies[:h_email] = { value: @user.email }
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
 
     if @user.save
@@ -32,7 +35,7 @@ class UsersController < ApplicationController
     @bodyId = 'refer'
     @is_mobile = mobile_device?
 
-    @user = User.find_by_email(cookies[:h_email])
+    @user = User.find_by_email(cookies[:h_email] || params[:user][:email])
 
     respond_to do |format|
       if @user.nil?
@@ -71,22 +74,20 @@ class UsersController < ApplicationController
     end
   end
 
-  # will need to uncomment the middle part of this method before launching in production
   def handle_ip
     # Prevent someone from gaming the site by referring themselves.
     # Presumably, users are doing this from the same device so block
     # their ip after their ip appears three times in the database.
-
     address = request.env['HTTP_X_FORWARDED_FOR']
     return if address.nil?
 
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
       current_ip = IpAddress.create(address: address, count: 1)
-    # elsif current_ip.count > 2
-    #   logger.info('IP address has already appeared three times in our records.
-    #              Redirecting user back to landing page.')
-    #   return redirect_to root_path
+    elsif current_ip.count > 2
+      logger.info('IP address has already appeared three times in our records.
+                 Redirecting user back to landing page.')
+      return redirect_to root_path
     else
       current_ip.count += 1
       current_ip.save
