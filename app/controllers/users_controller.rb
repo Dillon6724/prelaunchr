@@ -49,14 +49,6 @@ class UsersController < ApplicationController
   def faq
   end
 
-  def show
-    # need to add route here?
-  end
-
-  def update
-    # definitely need to add route here
-  end
-
   def redirect
     redirect_to root_path, status: 404
   end
@@ -74,26 +66,24 @@ class UsersController < ApplicationController
     end
   end
 
-  # will need to un-disable this in production
+  def handle_ip
+    # Prevent someone from gaming the site by referring themselves.
+    # Presumably, users are doing this from the same device so block
+    # their ip after their ip appears three times in the database.
 
-  # def handle_ip
-  #   # Prevent someone from gaming the site by referring themselves.
-  #   # Presumably, users are doing this from the same device so block
-  #   # their ip after their ip appears three times in the database.
-  #
-  #   address = request.env['HTTP_X_FORWARDED_FOR']
-  #   return if address.nil?
-  #
-  #   current_ip = IpAddress.find_by_address(address)
-  #   if current_ip.nil?
-  #     current_ip = IpAddress.create(address: address, count: 1)
-  #   elsif current_ip.count > 2
-  #     logger.info('IP address has already appeared three times in our records.
-  #                Redirecting user back to landing page.')
-  #     return redirect_to root_path
-  #   else
-  #     current_ip.count += 1
-  #     current_ip.save
-  #   end
-  # end
+    address = request.env['HTTP_X_FORWARDED_FOR']
+    return if address.nil?
+
+    current_ip = IpAddress.find_by_address(address)
+    if current_ip.nil?
+      current_ip = IpAddress.create(address: address, count: 1)
+    elsif current_ip.count > 2
+      logger.info('IP address has already appeared three times in our records.
+                 Redirecting user back to landing page.')
+      return redirect_to root_path
+    else
+      current_ip.count += 1
+      current_ip.save
+    end
+  end
 end
