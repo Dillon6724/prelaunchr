@@ -156,7 +156,7 @@ html.home{
 }
 
 #refer .page-content{
-	width: 1120px;
+	max-width: 900px;
 	margin: 0 auto;
 	z-index: 0;
 	position: relative;
@@ -214,46 +214,78 @@ html.home{
 	text-transform: uppercase;
 }
 
-#refer .share-wrap .copy-link{
+#refer .share-wrap .copy-link,
+.copy-link {
 	border: 1px solid #D1D0C7;
 	background: #FFF;
 	padding: 10px 0;
 	width: 320px;
-	text-transform: none;
+	font-family: "proxima-nova";
+	text-transform: uppercase;
+	font-weight: bold;
 	font-size: 11px;
 	margin: 10px auto 0;
+	letter-spacing: .13em;
+	text-align: center;
 }
 
-#refer .share-wrap .social-links{
-	width: 120px;
+.bottom_link {
+	text-align: center;
+	clear: both;
+	background-color: #f5f5f5;
+	padding: 10px 30px 10px 30px;
+	font-family: "proxima-nova";
+	text-transform: uppercase;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.bottom_text {
+	opacity: 0.7;
+}
+
+#refer .social-links{
+	width: auto;
 	height: 37px;
 	margin: 25px auto 0;
 	text-align: center;
 }
 
-#refer .share-wrap .social-links a, #refer .share-wrap .social-links div{
+#refer .social-links a, #refer .share-wrap .social-links div{
 	display: inline-block;
 }
 
-#refer .share-wrap .social-links .fb{
-	background: image-url("refer/fb.png");
+#refer .social-links .fb{
+	background: image-url("dashboard/fb.png");
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
+	margin: 6px;
 }
 
-#refer .share-wrap .social-links .twit{
-	background: image-url("refer/twit.png");
+#refer .social-links .twit{
+	background: image-url("dashboard/twit.png");
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
+	margin: 6px;
 }
 
-#refer .share-wrap .social-links .sep{
-	height: 28px;
-	width: 1px;
-	background: #BAB9BA;
-	margin: 0 20px;
+#refer .social-links .goog{
+	background: image-url("dashboard/goog.png");
+	background-size: 27px 27px;
+	width: 27px;
+	height: 27px;
+	margin: 6px;
+}
+
+#refer .product_images {
+	text-align: center;
+	margin-bottom: 40px;
+	img {
+		width: 17%;
+		margin: 4%;
+	}
 }
 
 #refer .prizes{
@@ -311,6 +343,7 @@ html.home{
 	margin-top: 30px;
 	position: relative;
 	z-index: 1;
+	clear: both;
 }
 
 #refer .prizes .products li.title{
@@ -469,71 +502,6 @@ html.home{
 	margin-top: 5px;
 	display: block;
 	text-decoration: none;
-}
-
-
-
-/*
-	RETINA
-*/
-@media only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2/1),
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-device-pixel-ratio: 2) {
-	#home .hero{
-		background: image-url("home/hero@2x.jpg") center center no-repeat;
-		background-size: 1600px 446px;
-	}
-
-	#home .form-wrap .key{
-		background: image-url("home/key@2x.png") 0 0 no-repeat;
-		background-size: 46px 19px;
-	}
-
-	#refer .header .logo{
-		background: image-url("refer/logo@2x.png") 0 0 no-repeat;
-		background-size: 106px 19px;
-	}
-
-	#refer .mammoth{
-		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
-		background-size: 610px 394px;
-	}
-
-	#refer .share-wrap .social-links .fb{
-		background: image-url("refer/fb@2x.png");
-		background-size: 27px 27px;
-	}
-
-	#refer .share-wrap .social-links .twit{
-		background: image-url("refer/twit@2x.png");
-		background-size: 27px 27px;
-	}
-
-	#refer .prizes .progress{
-		background: image-url("refer/progress-bg@2x.png") 0 0 repeat-x;
-		background-size: 1px 4px;
-	}
-
-	#refer .prizes .progress .mover .bar{
-		background: image-url("refer/progress-done@2x.png") 0 0 repeat-x;
-		background-size: 1px 4px;
-	}
-
-	#refer .prizes .progress .mover .razor{
-		background: image-url("refer/razor@2x.png") 0 0 no-repeat;
-		background-size: 82px 23px;
-	}
-
-	#refer .prizes .products li.product .caret{
-		background: image-url("refer/caret@2x.png") center center no-repeat;
-		background-size: 16px 10px;
-	}
-
-	#refer .prizes .products li.product.selected .caret{
-		background: image-url("refer/caret-selected@2x.png") center center no-repeat;
-		background-size: 16px 10px;
-	}
 }
 
 @media screen and (max-width: 980px){
