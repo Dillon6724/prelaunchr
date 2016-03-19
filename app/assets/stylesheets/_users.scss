@@ -6,13 +6,14 @@
     width: 100%;
 }
 
-#main{
+#home #main{
 	height: 100vh;
   top: 0px;
 	width: 100%;
   @media screen and (min-width: 1024px){
     background-image: url(/assets/home/landing_bg.png);
-    background-position: 50% 0%;
+    background-size: cover;
+    background-position: center center;
   	background-repeat: no-repeat;
   }
   @media screen and (max-width: 1023px){
@@ -25,7 +26,6 @@
   @media (min-width: 1023px) {
     width: 60vw;
     float: right;
-    max-width: 900px;
   }
   width: 100%;
 	text-align: center;
@@ -65,6 +65,14 @@
       font-size: 1em;
     }
   }
+}
+
+.proxima {
+  font-family: "proxima-nova", sans-serif !important;
+}
+
+.freight {
+  font-family: "freight-big-pro", serif !important;
 }
 
 .verily_logo_show {
@@ -129,7 +137,7 @@ form, form div, input { display: inline; }
   letter-spacing: 7px;
 	width: auto;
 	text-align: center;
-	margin: 0px auto;
+	margin: 0px;
 	text-transform: uppercase;
   opacity: 0.7;
   @media screen and (max-width: 1023px){
@@ -147,16 +155,6 @@ form, form div, input { display: inline; }
   @media screen and (max-width: 360px){
     font-size: 16px;
     letter-spacing: 3px;
-  }
-}
-
-.faq-hero {
-  .verily_logo {
-  }
-  .cover-title {
-    clear: both;
-    position: relative;
-    left: 10%;
   }
 }
 
@@ -197,16 +195,24 @@ form, form div, input { display: inline; }
 }
 
 .signup_form_wrapper {
-  width: 300px;
+  width: 260px;
   display: inline-block;
   margin-right: 46px;
   @media screen and (max-width: 1023px){
     margin-top: 30px;
-    margin-right: 0px;
+    margin-right: 100px;
+  }
+  @media screen and (max-width: 800px){
+    margin-top: 30px;
+    margin-right: 100px;
+    margin-right: 60px;
   }
   @media screen and (max-width: 600px){
     display: block;
     margin-top: 30px;
+    margin-right: 0px;
+    margin: 0 auto;
+
   }
   @media screen and (max-width: 450px){
     font-size: 18px;
@@ -252,7 +258,7 @@ form, form div, input { display: inline; }
 	border-radius: 0px;
   border: 1px solid black;
 	font-size: 13px;
-	width: 200px;
+	width: 160px;
 	float: left;
 	display: inline;
   padding: 0;
@@ -305,7 +311,7 @@ form, form div, input { display: inline; }
 
 .add_user .submit {
     height: 28px;
-    width: 80px;
+    width: 90px;
     border-radius: 0px;
     border: 1px solid black;
     line-height: 12px;
@@ -338,29 +344,31 @@ form, form div, input { display: inline; }
   }
 }
 
+.faq_thank_you {
+  margin-top: 70px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  text-align: center;
+  @media screen and (max-width: 1023px){
+    margin-top: 50px;
+    background-color: #ebebeb;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .cover small{
 	font-size: 16px;
 	color: #FFF;
 	font-weight: 400;
-	font-family: Lato;
 	text-transform: none;
 	text-align: center;
 	margin: 0px auto;
 	display: block;
-}
-
-#refer{
-	height: 500px;
-	background-size: cover;
-	background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.4);
-	top: 0px;
-	width: 100%;
-	display: table;
-	padding-top: 50px;
-	margin-bottom: 50px;
-	background-size: cover;
-	border-bottom: medium none;
 }
 
 #copy h3{
@@ -384,27 +392,6 @@ form, form div, input { display: inline; }
 	text-align: center;
 	width: auto;
 	text-transform: uppercase;
-}
-
-#refer input {
-    height: 35px;
-    border-radius: 0px;
-    font-size: 14px;
-    width: 85%;
-    margin: 10px 0px 25px 50px;
-    text-align: center;
-    line-height: 30px;
-}
-
-#refer p{
-    font-size: 16px;
-    color: black;
-    font-weight: 400;
-    font-family: Lato;
-    margin: 0px auto 0px 50px;
-    text-align: left;
-    width: auto;
-    text-transform: none;
 }
 
 #social-sharing {
@@ -489,162 +476,54 @@ aside h4{
 
 #faq {
   .faq-box {
-    padding-right: 200px;
-    padding-left: 200px;
-  }
-  h1 {
-    color: #1c4677;
-    font-family: "proxima-nova";
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  p {
-    font-family: "freight-big-pro";
-    font-size: 13px;
-    color: black;
-    letter-spacing: 2px;
+    margin-top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    @media (max-width: 1280px) {
+      margin-right: 10vw;
+      margin-left: 10vw;
+    }
+    h1 {
+      color: #1c4677;
+      font-family: "proxima-nova";
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: "freight-big-pro";
+      font-size: 13px;
+      color: black;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
   }
 }
 
 .faq-hero {
   height: 470px;
+  width: 100vw;
   background-image: url(/assets/dashboard/hero.png);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 980px){
-
-
-  #refer article p.small {
-    display: none;
+  @media (max-width: 768px) {
+    background-position: top right;
   }
-
-  #refer figcaption {
-    display: block;
-  }
-
-
-    #refer input {
-      height: 30px;
-      font-size: 19px;
-      margin-top: 10px;
-      line-height: 30px;
+  .cover-title {
+    clear: both;
+    position: relative;
+    left: 10%;
+    @media (max-width: 768px) {
+      left: 0%;
     }
-
-    #refer figcaption{
-      margin-top: 10px;
+  }
+  .verily_logo {
+    @media (min-width: 768px) {
+      float: right;
     }
-
-
-    #refer h2 {
-      padding-top: 20px;
-      font-size: 22px;
-      padding-bottom: 15px;
-    }
-
-
-}
-
-@media screen and (max-width: 850px){
-
-
-
-
-  #refer input {
-    height: 30px;
-    font-size: 18px;
-    margin-top: 10px;
-    line-height: 30px;
   }
-
-
-  #refer figure{
-    margin-top: 18px;
-  }
-
-  #refer h2 {
-    line-height: 30px;
-  }
-
-
-}
-
-
-@media screen and (max-width: 800px){
-
-
-
-  .refer-left {
-    padding: 0;
-  }
-
-  #refer input {
-    height: 30px;
-    font-size: 18px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  line-height: 30px;
-  }
-
-
-  #refer figure{
-    margin-top: 18px;
-  }
-
-  #refer h2 {
-    line-height: 30px;
-  }
-
-
-}
-
-@media screen and (max-width: 768px){
-
-  #refer input {
-    height: 28px;
-    font-size: 17px;
-    margin-top: 5px;
-    line-height: 28px;
-  }
-
-
-  #refer p{
-    line-height: 1.15;
-  }
-
-}
-
-@media screen and (max-width: 767px){
-
-  #reinforcement p{
-    text-align: center;
-  }
-
-  #copy h1, #copy h3, #refer p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #refer input{
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 14px;
-  }
-
-  #refer p {
-    font-size: 17px;
-  }
-
-  #refer h1 {
-    font-size: 30px;
-    margin: 15px auto 20px;
-  }
-
-
 }
 
 @media screen and (max-width: 600px){
@@ -683,25 +562,7 @@ aside h4{
 }
 
 
-@media screen and (max-width: 360px){
 
-  #refer h1 {
-    font-size: 27px;
-  }
-
-    .cover-heading {
-    font-size: 25px;
-  }
-
-  #refer p {
-    font-size: 15px;
-  }
-
-  #refer figcaption p {
-    font-size: 14px;
-  }
-
-}
 
 
 

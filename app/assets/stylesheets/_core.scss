@@ -139,12 +139,20 @@ html.home{
 	visibility: hidden;
 }
 
-.brandon{
-	font-family: "Brandon Grotesque", "brandon-grotesque", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+#refer{
+	height: 500px;
+	top: 0px;
+	width: 100%;
+	margin-bottom: 50px;
+	border-bottom: medium none;
 }
 
-#refer{
-	background: #FFF;
+#refer .hero {
+  background-image: url(/assets/dashboard/hero.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+	height: 360px;
 }
 
 #refer .page-content{
@@ -154,105 +162,56 @@ html.home{
 	position: relative;
 }
 
-#refer .header{
-	height: 50px;
-	background: #074E6F;
-	width: 100%;
-	overflow:hidden;
-	z-index: 1;
-	position: relative;
+#refer input {
+    height: 35px;
+    border-radius: 0px;
+    font-size: 14px;
+    width: 85%;
+    margin: 10px 0px 25px 50px;
+    text-align: center;
+    line-height: 30px;
 }
 
-#refer .header .content{
-	width: 315px;
-	margin: 0 auto;
-}
-
-#refer .header p{
-	float: left;
-	color: #FFF;
-	font-weight: 500;
-	text-transform: uppercase;
-	line-height: 50px;
-}
-
-#refer .header .byline{
-	font-size: 14px;
-}
-
-#refer .header .logo{
-	font-weight: normal;
-	font-size: 0;
-	line-height: 0;
-	margin-right: 14px;
-	letter-spacing: 1px;
-	background: image-url("refer/logo.png") 0 0 no-repeat;
-	background-size: 106px 19px;
-	height: 19px;
-	width: 106px;
-	margin-top: 15px;
-}
-
-#refer .hero{
-	background: #F1F0EE;
-	height: 391px;
-	overflow: hidden;
-}
-
-#refer .mammoth{
-	width: 612px;
-	height: 394px;
-	background: image-url("refer/mammoth.png") 0 0 no-repeat;
-	background-size: 610px 394px;
-	overflow: hidden;
-	margin-top: 15px;
-	float: left;
-}
-
-#refer .mammoth .need{
-	color: #FFF;
-	font-size: 38px;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin: 102px 0 0 72px;
-	display: block;
-	line-height: 56px;
-	letter-spacing: 4px;
-	text-align: center;
-	width: 284px;
+#refer p{
+    color: black;
+    font-family: "freight-big-pro";
+    width: auto;
 }
 
 #refer .share-wrap{
-	float: right;
-	width: 400px;
+	width: 600px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .13em;
-	margin-right: 60px;
+	margin: 0 auto;
 }
 
-#refer .share-wrap .why{
-	font-size: 16px;
-	color: #555556;
+#refer .share-wrap .big_blue {
+	color: #666699;
 	font-weight: bold;
-	margin-top: 42px;
+	font-size: 1.5em;
+}
+
+#refer .share-wrap .place {
+	margin-top: 1.5em;
 }
 
 #refer .share-wrap .title{
-	font-size: 30px;
-	line-height: 40px;
+	font-size: 25px;
+	line-height: 35px;
 	text-transform: uppercase;
-	font-weight: bold;
-	color: #074E6F;
-	margin-top: 18px;
+	font-weight: 100;
+	color: black;
+	padding-top: 50px;
 	letter-spacing: .13em;
 }
 
 #refer .share-wrap .subtitle{
 	color: #565656;
-	font-size: 14px;
+	font-size: 15px;
 	text-transform: none;
-	margin-top: 15px;
+	margin-top: 30px;
+	text-transform: uppercase;
 }
 
 #refer .share-wrap .copy-link{
@@ -262,7 +221,7 @@ html.home{
 	width: 320px;
 	text-transform: none;
 	font-size: 11px;
-	margin: 20px auto 0;
+	margin: 10px auto 0;
 }
 
 #refer .share-wrap .social-links{
@@ -300,7 +259,6 @@ html.home{
 #refer .prizes{
 	width: 100%;
 	background: #FFF;
-	border-top: 1px solid #D2D1C8;
 	padding-bottom: 100px;
 }
 
@@ -311,11 +269,10 @@ html.home{
 #refer .prizes .callout{
 	text-align: center;
 	font-size: 16px;
-	color: #074E6F;
-	font-weight: bold;
-	margin: 20px 0 0 0;
+	color: black;
+	font-family: "freight-big-pro";
 	letter-spacing: 2px;
-	text-transform: uppercase;
+	margin-top: 70px;
 }
 
 #refer .prizes .progress{
@@ -577,4 +534,156 @@ only screen and (min-device-pixel-ratio: 2) {
 		background: image-url("refer/caret-selected@2x.png") center center no-repeat;
 		background-size: 16px 10px;
 	}
+}
+
+@media screen and (max-width: 980px){
+
+
+  #refer article p.small {
+    display: none;
+  }
+
+  #refer figcaption {
+    display: block;
+  }
+
+
+    #refer input {
+      height: 30px;
+      font-size: 19px;
+      margin-top: 10px;
+      line-height: 30px;
+    }
+
+    #refer figcaption{
+      margin-top: 10px;
+    }
+
+
+    #refer h2 {
+      padding-top: 20px;
+      font-size: 22px;
+      padding-bottom: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 850px){
+
+
+
+
+  #refer input {
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+
+
+  #refer figure{
+    margin-top: 18px;
+  }
+
+  #refer h2 {
+    line-height: 30px;
+  }
+
+
+}
+
+
+@media screen and (max-width: 800px){
+
+
+
+  .refer-left {
+    padding: 0;
+  }
+
+  #refer input {
+    height: 30px;
+    font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 30px;
+  }
+
+
+  #refer figure{
+    margin-top: 18px;
+  }
+
+  #refer h2 {
+    line-height: 30px;
+  }
+
+
+}
+
+@media screen and (max-width: 768px){
+
+  #refer input {
+    height: 28px;
+    font-size: 17px;
+    margin-top: 5px;
+    line-height: 28px;
+  }
+
+
+  #refer p{
+    line-height: 1.15;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+
+  #reinforcement p{
+    text-align: center;
+  }
+
+  #copy h1, #copy h3, #refer p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #refer input{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+
+  #refer p {
+    font-size: 17px;
+  }
+
+  #refer h1 {
+    font-size: 30px;
+    margin: 15px auto 20px;
+  }
+
+
+}
+
+@media screen and (max-width: 360px){
+
+  #refer h1 {
+    font-size: 27px;
+  }
+
+    .cover-heading {
+    font-size: 25px;
+  }
+
+  #refer p {
+    font-size: 15px;
+  }
+
+  #refer figcaption p {
+    font-size: 14px;
+  }
+
 }
