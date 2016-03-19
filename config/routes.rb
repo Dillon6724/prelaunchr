@@ -4,6 +4,8 @@ Prelaunchr::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  resources :users
+
   root :to => "users#new"
 
   post 'users/create' => 'users#create'

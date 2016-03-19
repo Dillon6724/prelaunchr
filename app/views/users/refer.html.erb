@@ -45,28 +45,26 @@
   <div class="page-content">
     <p class="callout">Get five friends to sign up for our email list using your unique link and you’ll officially be a VIP, which means you’ll have exclusive access to Verily news and opportunities. For every five extra friends who sign up through your unique link, you’ll have the chance to choose one more beautiful Verily gift from these options, below.</p>
     <div class="product_images"><%= image_tag "prizes/tote.png" %><%= image_tag "prizes/dose.png" %><%= image_tag "prizes/mug.png" %><%= image_tag "prizes/notebook.png" %></div>
-    <!-- <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-      <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
-          <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
-
-          <div class="tooltip">
-            <img src="<%= stop["image"] %>" height="254">
+    <div class="progress-chart">
+      <ul class="products">
+        <div class="progress">
+          <div class="mover">
+            <div class="bar"></div>
           </div>
-        </li>
-      <% end %>
-    </ul> -->
-
-    <!-- <div class="progress">
-      <div class="mover">
-        <div class="bar clearfix"></div>
-      </div>
-    </div> -->
-
+        </div>
+        <li class="product proxima"><div class="circle">0</div></li>
+        <% stops.each do |stop| %>
+          <li class="product proxima <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+            <div class="circle"><%= stop["count"] %></div><div class="stop_count"><%= stop["html"].html_safe %></div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
+</div>
+
+<div class="buttons">
+  <%= link_to "MY ACCOUNT", user_path(@user.id) %>
 </div>
 
 <div class="bottom_link">

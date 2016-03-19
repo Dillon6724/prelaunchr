@@ -43,7 +43,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def policy
+  def show
+    # what to put here?
+  end
+
+  def update
+    # what to put here?
   end
 
   def faq
