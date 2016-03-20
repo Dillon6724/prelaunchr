@@ -28,6 +28,12 @@
     <h1>What should I do if I experience technical problems?</h1>
     <p>If this website isn’t working, please email ohhello@verilymag.com.</p>
   </div>
+
+  <div class="buttons">
+      <%= link_to "MY ACCOUNT", user_path(@user.id) if @user %>
+      <%= link_to "MY REWARDS", refer_a_friend_url if @user %>
+  </div>
+
   <div class="faq_thank_you">
     Thank you for supporting Verily!
   </div>

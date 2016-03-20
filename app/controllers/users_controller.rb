@@ -62,6 +62,7 @@ class UsersController < ApplicationController
   end
 
   def faq
+    @user = User.find_by_email(cookies[:h_email])
   end
 
   def redirect
