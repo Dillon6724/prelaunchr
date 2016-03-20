@@ -12,7 +12,7 @@ Prelaunchr::Application.routes.draw do
   post 'refer-a-friend' => 'users#refer'
   get 'faq' => 'users#faq'
 
-  resources :users, :only => [:show, :update, :edit] 
+  resources :users, :only => [:show, :update, :edit]
 
   unless Rails.application.config.consider_all_requests_local
     get '*not_found', to: 'users#redirect', :format => false

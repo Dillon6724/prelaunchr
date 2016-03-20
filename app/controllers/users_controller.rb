@@ -8,6 +8,12 @@ class UsersController < ApplicationController
     @bodyId = 'home'
     @is_mobile = mobile_device?
 
+    Rails.logger.warn params[:REF]
+
+    if params[:REF]
+      cookies[:h_ref] = { value: params[:REF]}
+    end
+
     @user = User.new
 
     respond_to do |format|
@@ -16,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    ref_code = cookies[:h_ref]
+    ref_code = cookies[:h_ref].downcase
     email = params[:user][:email]
     @user = User.new(email: email)
     cookies[:h_email] = { value: @user.email }
@@ -41,6 +47,7 @@ class UsersController < ApplicationController
       if @user.nil?
         format.html { redirect_to root_path, alert: 'Something went wrong!' }
       else
+        cookies[:h_email] = { value: @user.email }
         format.html # refer.html.erb
       end
     end

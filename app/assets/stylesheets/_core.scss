@@ -413,21 +413,17 @@ html.home{
 	margin-right: 0;
 }
 
-#refer .prizes .products li.product.selected .circle{
-	background: #995F5E !important;
-	border-color: #995F5E !important;
-	color: #FFF !important;
-}
+#refer .prizes .products li.product.selected,
+#refer .prizes .products li.product:first-of-type {
+	.circle{
+		background: #074E6F !important;
+		border-color: #074E6F !important;
+		color: #FFF !important;
+	}
 
-
-#refer .prizes .products li.product.selected p{
-	color: #995F5E !important;
-}
-
-#refer .prizes .products li.product:hover .circle{
-	color: #FFF;
-	background: #074E6F;
-	border-color: #074E6F;
+	p {
+		color: #995F5E !important;
+	}
 }
 
 #refer .prizes p.place{
