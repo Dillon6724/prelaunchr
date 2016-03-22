@@ -526,6 +526,94 @@ aside h4{
   }
 }
 
+.edit_form {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.edit_user {
+	display: inline;
+	border: medium none;
+}
+
+.edit_user .form-inline{
+	display: inline;
+  height: 28px;
+}
+
+.edit_user .email{
+	height: 26px;
+  line-height: 26px;
+	border-radius: 0px;
+  border: 1px solid black;
+	font-size: 13px;
+	width: 160px;
+	float: left;
+	display: inline;
+  padding: 0;
+  input {
+    height: 26px;
+    padding: 0 !important;
+    min-height: none !important;
+  }
+}
+
+.edit_user .email::-webkit-input-placeholder {
+   text-align: center;
+   text-transform: capitalize;
+   font-family: "freight-big-pro";
+   font-size: 13px;
+   opacity: 1 !important;
+   color: black;
+   background-color: none;
+}
+
+.edit_user .email::placeholder {
+   text-align: center;
+   text-transform: capitalize;
+   font-family: "freight-big-pro";
+   font-size: 13px;
+   opacity: 1 !important;
+   color: black;
+   background-color: none;
+}
+
+.edit_user .email::-ms-input-placeholder {
+   text-align: center;
+   text-transform: capitalize;
+   font-family: "freight-big-pro";
+   font-size: 13px;
+   opacity: 1 !important;
+   color: black;
+   background-color: none;
+}
+
+.edit_user .email::-moz-placeholder {
+   text-align: center;
+   text-transform: capitalize;
+   font-family: "freight-big-pro";
+   font-size: 13px;
+   opacity: 1 !important;
+   color: black;
+   background-color: none;
+}
+
+.edit_user .submit {
+    height: 28px;
+    width: 90px;
+    border-radius: 0px;
+    border: 1px solid black;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background-color: #182343;
+    color: #FFF;
+    font-family: "proxima-nova", sans-serif;
+    float: right;
+    display: inline;
+}
+
 @media screen and (max-width: 600px){
   .cover {
     padding: 0 5px;

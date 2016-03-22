@@ -67,6 +67,26 @@ class UsersController < ApplicationController
     else
       @user = User.find_by_email(cookies[:h_email])
     end
+
+    @user.email = params[:user][:email]
+    @user.first_name = params[:user][:first_name]
+    @user.last_name = params[:user][:last_name]
+    @user.age = params[:user][:age]
+    @user.street_address = params[:user][:street_address]
+    @user.city = params[:user][:city]
+    @user.state = params[:user][:state]
+    @user.zip = params[:user][:zip]
+    @user.occupation = params[:user][:occupation]
+    @user.how_long = params[:user][:how_long]
+    @user.how_heard = params[:user][:how_heard]
+
+    if @user.save
+      cookies[:h_email] = { value: @user.email }
+      redirect_to '/refer-a-friend'
+    else
+      logger.info("Error saving user with email, #{email}")
+      redirect_to root_path, alert: 'Something went wrong!'
+    end
   end
 
   def edit

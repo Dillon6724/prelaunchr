@@ -1,0 +1,16 @@
+<div class="edit_form">
+  <%= form_for @user, :html => {novalidate: false, class: "form-inline edit_user", id: "edit_user"}, :url => { :action => "update" } do |f| %>
+    <%= f.text_field :first_name, :value => @user.first_name, :placeholder => "First Name", :class => "email form-inline" %>
+    <%= f.text_field :last_name, :value => @user.last_name, :placeholder => "Last Name", :class => "email form-inline" %>
+    <%= f.text_field :age, :value => @user.age, :placeholder => "Age", :class => "email form-inline" %>
+    <%= f.text_field :street_address, :value => @user.street_address, :placeholder => "Street Address", :class => "email form-inline" %>
+    <%= f.text_field :city, :value => @user.city, :placeholder => "City", :class => "email form-inline" %>
+    <%= f.text_field :state, :value => @user.state, :placeholder => "State", :class => "email form-inline" %>
+    <%= f.text_field :zip, :value => @user.zip, :placeholder => "ZIP Code", :class => "email form-inline" %>
+    <%= f.text_field :occupation, :value => @user.occupation, :placeholder => "Occupation", :class => "email form-inline" %>
+    <%= f.text_field :how_long, :value => @user.how_long, :placeholder => "How long have you been reading Verily?", :class => "email form-inline" %>
+    <%= f.text_field :how_heard, :value => @user.how_heard, :placeholder => "How did you learn about Verily?", :class => "email form-inline" %>
+    <%= f.text_field :email, :value => @user.email, :placeholder => "Enter your email", :class => "email form-inline" %>
+    <input class="form-group submit form-inline" name="commit" type="submit" value="SUBMIT" />
+  <% end %>
+</div>
