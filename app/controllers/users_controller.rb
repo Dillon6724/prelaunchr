@@ -54,11 +54,23 @@ class UsersController < ApplicationController
   end
 
   def show
-    # what to put here?
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = User.find_by_email(cookies[:h_email])
+    end
   end
 
   def update
-    # what to put here?
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = User.find_by_email(cookies[:h_email])
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   def faq

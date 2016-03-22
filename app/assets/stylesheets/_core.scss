@@ -147,7 +147,8 @@ html.home{
 	border-bottom: medium none;
 }
 
-#refer .hero {
+#refer .hero,
+#show .hero {
   background-image: url(/assets/dashboard/hero.png);
   background-size: cover;
   background-position: top center;
@@ -155,7 +156,8 @@ html.home{
 	height: 360px;
 }
 
-#refer .page-content{
+#refer .page-content,
+#show .page-content {
 	max-width: 900px;
 	margin: 0 auto;
 	z-index: 0;
@@ -196,7 +198,8 @@ html.home{
 	margin-top: 1.5em;
 }
 
-#refer .share-wrap .title{
+#refer .share-wrap .title,
+#show .title {
 	font-size: 25px;
 	line-height: 35px;
 	text-transform: uppercase;
@@ -439,6 +442,66 @@ html.home{
 #refer .prizes p.place span{
 	color: #995F5E;
 }
+
+/// show page
+
+#show {
+	text-align: center;
+	.verily_logo {
+		img {
+			height: 120px;
+	    width: auto;
+	    margin: 30px 24px;
+	    @media screen and (max-width: 600px) {
+	      height: 100px;
+	      width: auto;
+	    }
+		}
+		.vip {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 100;
+			font-family: "proxima-nova", sans-serif;
+			font-size: 1.6em;
+			letter-spacing: 3px;
+			position: relative;
+			top: -80px !important;
+			left: -8px;
+			@media (min-width: 1023px) {
+				left: -24px;
+			}
+			@media screen and (max-width: 600px) {
+				top: -75px;
+				font-size: 1em;
+			}
+		}
+	}
+	.title {
+		clear: both;
+		padding-top: 0px;
+	}
+}
+
+#show .blue {
+	color: #666699;
+	font-weight: bold;
+	font-family: "proxima-nova";
+	letter-spacing: 2.5px;
+}
+
+#show .user-details {
+	border: 1px solid black;
+	width: 460px;
+	margin: 0 auto;
+	font-family: "proxima-nova"
+}
+
+.user-info li {
+	list-style: none;
+	line-height: 1.5em;
+}
+
+///// media queries
 
 @media screen and (max-width: 980px){
 

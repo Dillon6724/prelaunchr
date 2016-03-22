@@ -1,82 +1,43 @@
-<div class="hero">
-  <div class="share-wrap">
-    <p class="title proxima">Invite Your Friends And <br>Earn Rewards!<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
-    <p class="subtitle proxima">Your unique share link</p>
+<section id='show'>
+  <div class='verily_logo'>
+    <%= image_tag "verily_logo.png" %>
+    <p class='vip'>vip</p>
+  </div>
+  <div class="hero">
+    <div class="share-wrap">
+      <p class="title proxima">Manage Your Account<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
+    </div>
+  </div>
+
+  <div class="blue">PERSONAL DETAILS</div>
+
+  <div class="user-details">
+    <ul class="user-info">
+      <li><%= @user.email %> <%= @user.email %></li>
+      <li><%= @user %></li>
+      <li><%= @user %></li>
+      <li><%= @user %></li>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <%= link_to "MY REWARDS", refer_a_friend_url if @user %>
+    <%= link_to "FAQ", "../faq.html" %>
+  </div>
+
+  <div class="blogger-badge">
+    BLOGGER BADGE HERE
+  </div>
+
+  <div class="bottom_link">
+    <span class="bottom_text">Use your unique link to share Verily via email or social media to earn more rewards.</span>
     <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
-
-    <%
-      referrals_count = @user.referrals.count
-
-      stops = User::REFERRAL_STEPS
-
-      found = nil
-
-      stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
-          stop["selected"] = true
-          found = stop
-        else
-          stop["selected"] = false
-        end
-      }
-    %>
-
-    <%
-      words = ''
-      if referrals_count == 1
-        word1 = 'friend'
-        word2 = 'has'
-      elsif
-        word1 = 'friends'
-        word2 = 'have'
-      end
-    %>
-
-    <% if referrals_count == 0 %>
-      <p class="place proxima"><span class="big_blue">No friends</span><br/> have joined yet</p>
-    <% else %>
-      <p class="place proxima"><span class="big_blue"><%= referrals_count %> <%= word1 %></span><br/> <%= word2 %> joined</p>
-    <% end %>
-
   </div>
-</div>
 
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-  <div class="page-content">
-    <p class="callout">Get five friends to sign up for our email list using your unique link and you’ll officially be a VIP, which means you’ll have exclusive access to Verily news and opportunities. For every five extra friends who sign up through your unique link, you’ll have the chance to choose one more beautiful Verily gift from these options, below.</p>
-    <div class="product_images"><%= image_tag "prizes/tote.png" %><%= image_tag "prizes/dose.png" %><%= image_tag "prizes/mug.png" %><%= image_tag "prizes/notebook.png" %></div>
-    <!-- <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-      <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
-          <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
-
-          <div class="tooltip">
-            <img src="<%= stop["image"] %>" height="254">
-          </div>
-        </li>
-      <% end %>
-    </ul> -->
-
-    <!-- <div class="progress">
-      <div class="mover">
-        <div class="bar clearfix"></div>
-      </div>
-    </div> -->
-
+  <% twitter_message = "Verily Magazine" %>
+  <div class="social-links">
+    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="fb" target="_blank"></a>
+    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="twit" target="_blank"></a>
+    <a href="https://plus.google.com/share?url=<%= root_url %><%= @user.referral_code %>" class="goog" target="_blank"></a>
   </div>
-</div>
-
-<div class="bottom_link">
-  <span class="bottom_text">Use your unique link to share Verily via email or social media to earn more rewards.</span>
-  <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
-</div>
-
-<% twitter_message = "Verily Magazine" %>
-<div class="social-links">
-  <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-  <div class="sep"></div>
-  <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-</div>
+</section>
