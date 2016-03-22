@@ -13,11 +13,15 @@
 
   <div class="user-details">
     <ul class="user-info">
-      <li><%= @user.email %> <%= @user.email %></li>
-      <li><%= @user %></li>
-      <li><%= @user %></li>
-      <li><%= @user %></li>
+      <li><%= @user.first_name %> <%= @user.last_name %></li>
+      <li><%= @user.street_address %></li>
+      <li><%= @user.city %>, <%= @user.state %> <%= @user.zip %></li>
+      <li><%= @user.email %></li>
     </ul>
+  </div>
+
+  <div class="edit-button">
+    <%= link_to "EDIT", edit_user_url(@user.id) %>
   </div>
 
   <div class="buttons">

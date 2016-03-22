@@ -244,7 +244,8 @@ html.home{
 }
 
 #refer .buttons,
-#faq .buttons {
+#faq .buttons,
+#show .buttons {
 	text-align: center;
 	clear: both;
 	padding: 50px;
@@ -483,6 +484,7 @@ html.home{
 }
 
 #show .blue {
+	margin-top: 40px;
 	color: #666699;
 	font-weight: bold;
 	font-family: "proxima-nova";
@@ -490,15 +492,41 @@ html.home{
 }
 
 #show .user-details {
-	border: 1px solid black;
 	width: 460px;
 	margin: 0 auto;
-	font-family: "proxima-nova"
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: "proxima-nova";
+	opacity: 0.7;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .user-info li {
 	list-style: none;
 	line-height: 1.5em;
+}
+
+#show .edit-button {
+	text-align: center;
+	clear: both;
+	a {
+		padding: 10px 30px 10px 30px;
+		text-transform: uppercase;
+		text-decoration: none;
+		height: 28px;
+		width: 90px;
+		border-radius: 0px;
+		border: 1px solid black;
+		line-height: 12px;
+		font-size: 12px;
+		font-weight: 100;
+		letter-spacing: 1px;
+		background-color: white;
+		color: black;
+		font-family: "proxima-nova", sans-serif;
+		display: inline;
+	}
 }
 
 ///// media queries
