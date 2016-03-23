@@ -4,6 +4,9 @@ class SubscribersController < InheritedResources::Base
   # before_filter :handle_ip, only: :create
 
   def new
+    if cookies[:h_subscriber] = "true"
+      redirect_to 'https://verilymag.com' and return # to VERILYMAG.com
+    end
     @subscriber = Subscriber.new
   end
 
@@ -15,7 +18,7 @@ class SubscribersController < InheritedResources::Base
 
     if @subscriber.save
       cookies[:h_subscriber] = { value: "true"}
-      redirect_to 'www.verilymag.com' and return # REDIRECT WHERE, EXACTLY?
+      redirect_to 'https://verilymag.com' and return # REDIRECT WHERE, EXACTLY?
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to root_path, alert: 'Something went wrong!'
