@@ -8,10 +8,9 @@ class UsersController < ApplicationController
     @bodyId = 'home'
     @is_mobile = mobile_device?
 
-    Rails.logger.warn params[:REF]
-
     if params[:REF]
       cookies[:h_ref] = { value: params[:REF]}
+      # redirect to new subscriber url
     end
 
     @user = User.new
