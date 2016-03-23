@@ -13,6 +13,7 @@ Prelaunchr::Application.routes.draw do
   get 'faq' => 'users#faq'
 
   resources :users, :only => [:show, :update, :edit]
+  resources :subscribers
 
   unless Rails.application.config.consider_all_requests_local
     get '*not_found', to: 'users#redirect', :format => false

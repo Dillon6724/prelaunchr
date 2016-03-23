@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     if params[:REF]
       cookies[:h_ref] = { value: params[:REF]}
       # redirect to new subscriber url
+      redirect_to new_subscriber_url and return
+    elsif cookies[:h_subscriber]
+      redirect_to 'www.verilymag.com' # to VERILYMAG.com
     end
 
     @user = User.new
