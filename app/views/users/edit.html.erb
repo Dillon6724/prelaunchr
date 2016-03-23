@@ -11,4 +11,10 @@
 
   <%= render "user_details" %>
 
+  <div class="buttons">
+      <%= link_to "MY ACCOUNT", user_path(@user.id) if @user %>
+      <%= link_to "MY REWARDS", refer_a_friend_url if @user %>
+      <%= link_to "FAQ", "faq.html" %>
+  </div>
+
 </section>
