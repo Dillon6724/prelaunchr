@@ -527,8 +527,9 @@ aside h4{
 }
 
 .edit_form {
-  width: 700px;
+  max-width: 600px;
   margin: 0 auto;
+  margin-top: 60px;
 }
 
 .edit_user {
@@ -541,7 +542,7 @@ aside h4{
   height: 28px;
 }
 
-.edit_user .email{
+.edit_user .input {
 	height: 26px;
   line-height: 26px;
 	border-radius: 0px;
@@ -550,7 +551,13 @@ aside h4{
 	width: 160px;
 	float: left;
 	display: inline;
-  padding: 0;
+  text-align: left;
+  padding: 0px 10px 0px 10px;
+  font-family: "freight-big-pro", serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 18px;
+  margin-right: 18px;
   input {
     height: 26px;
     padding: 0 !important;
@@ -558,7 +565,61 @@ aside h4{
   }
 }
 
-.edit_user .email::-webkit-input-placeholder {
+.edit_user .first_name,
+.edit_user .last_name,
+.edit_user .address {
+  width: 200px;
+}
+
+.edit_user .age {
+  width: 1.2em;
+  text-align: center;
+  float: left;
+}
+
+.edit_user .state {
+  width: 1.2em;
+  text-align: center;
+}
+
+.edit_user .zip {
+  width: 3em;
+  text-align: center;
+  float: left;
+}
+
+.edit_user .city {
+  width: 105px;
+}
+
+.edit_user .occupation {
+  width: 200px;
+  margin-right: 100%;
+}
+
+.edit_user h1 {
+  margin-left: 18px;
+  margin-right: 18px;
+  padding-top: 20px;
+  text-align: left;
+  font-family: "proxima-nova", sans-serif;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+
+.edit_user .how_long {
+  width: 542px;
+  margin-right: 18px;
+}
+
+.edit_user .how_heard {
+  width: 542px;
+  margin-right: 18px;
+}
+
+.edit_user .input::-webkit-input-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -568,7 +629,7 @@ aside h4{
    background-color: none;
 }
 
-.edit_user .email::placeholder {
+.edit_user .input::placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -578,7 +639,7 @@ aside h4{
    background-color: none;
 }
 
-.edit_user .email::-ms-input-placeholder {
+.edit_user .input::-ms-input-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -588,7 +649,7 @@ aside h4{
    background-color: none;
 }
 
-.edit_user .email::-moz-placeholder {
+.edit_user .input::-moz-placeholder {
    text-align: center;
    text-transform: capitalize;
    font-family: "freight-big-pro";
@@ -612,6 +673,10 @@ aside h4{
     font-family: "proxima-nova", sans-serif;
     float: right;
     display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
 }
 
 @media screen and (max-width: 600px){
