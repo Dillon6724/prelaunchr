@@ -6,10 +6,10 @@
     <%= f.text_field :street_address, :value => @user.street_address, :placeholder => "Street Address", :class => "input address form-inline" %>
     <%= f.text_field :city, :value => @user.city, :placeholder => "City", :class => "input city form-inline" %>
     <%= f.text_field :state, :value => @user.state, :placeholder => "State", :class => "input state form-inline" %>
-    <%= f.text_field :zip, :value => @user.zip, :placeholder => "ZIP Code", :class => "input zip form-inline" %>
+    <%= f.text_field :zip, :value => @user.zip, :placeholder => "ZIP", :class => "input zip form-inline" %>
     <%= f.text_field :occupation, :value => @user.occupation, :placeholder => "Occupation", :class => "input occupation form-inline" %>
-    <h1>How long have you been reading Verily?</h1> <%= f.text_field :how_long, :value => @user.how_long, :placeholder => "How long have you been reading Verily?", :class => "input how_long form-inline" %>
-    <h1>How did you learn about Verily?</h1><%= f.text_field :how_heard, :value => @user.how_heard, :placeholder => "How did you learn about Verily?", :class => "input how_heard form-inline" %>
+    <%= f.text_field :how_long, :value => @user.how_long, :placeholder => "How long have you been reading Verily?", :class => "input how_long form-inline" %>
+    <%= f.text_field :how_heard, :value => @user.how_heard, :placeholder => "How did you learn about Verily?", :class => "input how_heard form-inline" %>
     <%= f.text_field :email, :value => @user.email, :placeholder => "Enter your email", :class => "email input form-inline" %>
     <input class="form-group submit form-inline" name="commit" type="submit" value="SUBMIT" />
   <% end %>

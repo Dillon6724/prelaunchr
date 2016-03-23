@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    ref_code = cookies[:h_ref].downcase
+    ref_code = cookies[:h_ref].downcase if ref_code
     email = params[:user][:email]
     @user = User.new(email: email)
     cookies[:h_email] = { value: @user.email }
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     if @user.save
       cookies[:h_email] = { value: @user.email }
-      redirect_to '/refer-a-friend'
+      redirect_to edit_user_url(@user.id)
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to root_path, alert: 'Something went wrong!'
