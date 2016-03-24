@@ -1,5 +1,24 @@
-<h1>New Subscriber</h1>
+<section id="subscriber_signup">
+  <div class='verily_logo'>
+    <%= image_tag "verily_logo.png" %>
+    <p class='vip'>vip</p>
+  </div>
+  <div class="hero">
+    <div class="share-wrap">
+      <p class="title proxima">Welcome to Verily!<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
+      <p class="subtitle proxima">Your friend thought we'd get along</p>
+    </div>
+  </div>
 
-<%= render 'form' %>
+  <div class="bottom_link">
+    <span class="bottom_text">Sign up to get a daily dose of Verily in your Inbox</span>
+    <div class="copy-link"><%= render 'form' %></div>
+  </div>
 
-<%= link_to 'Back', subscribers_path %>
+  <% twitter_message = "Verily Magazine" %>
+  <div class="social-links">
+    <a href="http://www.facebook.com/verilymag" class="fb" target="_blank"></a>
+    <a href="http://twitter.com/verilymag" class="twit" target="_blank"></a>
+    <a href="https://plus.google.com/s/verily%20magazine/top" class="goog" target="_blank"></a>
+  </div>
+</section>

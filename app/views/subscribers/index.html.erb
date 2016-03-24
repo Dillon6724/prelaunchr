@@ -1,1 +1,24 @@
-SUBSCRIBER POST-SIGN UP PAGE
+<section id="subscriber_success">
+  <div class='verily_logo'>
+    <%= image_tag "verily_logo.png" %>
+    <p class='vip'>vip</p>
+  </div>
+  <div class="hero">
+    <div class="share-wrap">
+      <p class="title proxima">Invite Your Friends And <br>Earn Rewards!<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
+      <p class="subtitle proxima">Your unique share link</p>
+    </div>
+  </div>
+
+  <div class="bottom_link">
+    <span class="bottom_text">Use your unique link to share Verily via email or social media to earn more rewards.</span>
+    <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
+  </div>
+
+  <% twitter_message = "Verily Magazine" %>
+  <div class="social-links">
+    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="fb" target="_blank"></a>
+    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="twit" target="_blank"></a>
+    <a href="https://plus.google.com/share?url=<%= root_url %><%= @user.referral_code %>" class="goog" target="_blank"></a>
+  </div>
+</section>
