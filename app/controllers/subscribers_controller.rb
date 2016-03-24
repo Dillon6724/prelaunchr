@@ -4,24 +4,27 @@ class SubscribersController < InheritedResources::Base
   # before_filter :handle_ip, only: :create
 
   def new
-    if cookies[:h_subscriber] = "true"
-      redirect_to 'https://verilymag.com' and return # to VERILYMAG.com
-    end
-    @subscriber = Subscriber.new
+    # this anti-cheating code seems to be giving inconsistent results. Disabling for now.
+
+    # if cookies[:h_subscriber] = "true"
+      # redirect_to 'https://verilymag.com' and return # to VERILYMAG.com
+    # else
+      @subscriber = Subscriber.new
+    # end
   end
 
   def create
-    ref_code = cookies[:h_ref].downcase if ref_code
+    ref_code = cookies[:h_ref].downcase if cookies[:h_ref]
     email = params[:subscriber][:email]
     @subscriber = Subscriber.new(email: email)
     @subscriber.referrer = User.find_by_referral_code(ref_code) if ref_code
 
     if @subscriber.save
       cookies[:h_subscriber] = { value: "true"}
-      redirect_to 'https://verilymag.com' and return # REDIRECT WHERE, EXACTLY?
+      redirect_to subscribers_url and return # REDIRECT WHERE, EXACTLY?
     else
       logger.info("Error saving user with email, #{email}")
-      redirect_to root_path, alert: 'Something went wrong!'
+      redirect_to new_subscriber_url, alert: 'Something went wrong!'
     end
   end
 

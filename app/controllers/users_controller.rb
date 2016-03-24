@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    ref_code = cookies[:h_ref].downcase if ref_code
+    ref_code = cookies[:h_ref].downcase if cookies[:h_ref]
     email = params[:user][:email]
     @user = User.new(email: email)
     cookies[:h_email] = { value: @user.email }
