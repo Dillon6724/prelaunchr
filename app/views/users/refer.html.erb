@@ -10,7 +10,7 @@
       <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
 
       <%
-        referrals_count = @user.referrals.count
+        referrals_count = @user.referrals.count + @user.subscribers.count
 
         stops = User::REFERRAL_STEPS
 
