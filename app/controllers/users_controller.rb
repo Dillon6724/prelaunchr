@@ -100,6 +100,11 @@ class UsersController < ApplicationController
     redirect_to root_path, status: 404
   end
 
+  def logout
+    cookies.delete :h_email
+    redirect_to root_path
+  end
+
   private
 
   def skip_first_page

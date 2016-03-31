@@ -149,7 +149,8 @@ html.home{
 
 #refer .hero,
 #show .hero,
-#edit .hero {
+#edit .hero,
+#subscriber_signup .hero {
   background-image: url(/assets/dashboard/hero.png);
   background-size: cover;
   background-position: top center;
@@ -201,7 +202,8 @@ html.home{
 
 #refer .share-wrap .title,
 #show .title,
-#edit .title {
+#edit .title,
+#subscriber_signup .title {
 	font-size: 25px;
 	line-height: 35px;
 	text-transform: uppercase;
@@ -564,6 +566,28 @@ html.home{
 	text-transform: uppercase;
 	font-size: 1.2em;
 	margin-bottom: 20px;
+}
+
+.header_nav {
+	height: 40px;
+	background-color: #7b8faf;
+	text-align: right;
+	color: white;
+	line-height: 40px;
+	font-family: "proxima-nova";
+	font-size: 13px;
+	font-weight: lighter;
+	letter-spacing: 2.5px;
+}
+
+.header_nav ul li {
+	display: inline;
+	margin-right: 30px;
+}
+
+.header_nav a {
+	text-decoration: none;
+	color: white;
 }
 
 ///// edit page

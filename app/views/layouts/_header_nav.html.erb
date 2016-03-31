@@ -1,0 +1,13 @@
+<% if @user && @user.id %>
+  <div class="header_nav">
+    <ul>
+      <li><%= link_to "MY REWARDS", refer_a_friend_url %></li>
+      <li>•</li>
+      <li><%= link_to "MY ACCOUNT", user_path(@user.id) %></li>
+      <li>•</li>
+      <li><%= link_to "FAQ", "../faq.html" %></li>
+      <li>•</li>
+      <li><%= link_to "LOG OUT", logout_url %></li>
+    </ul>
+  </div>
+<% end %>

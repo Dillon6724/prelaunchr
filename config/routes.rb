@@ -12,6 +12,8 @@ Prelaunchr::Application.routes.draw do
   post 'refer-a-friend' => 'users#refer'
   get 'faq' => 'users#faq'
 
+  get 'logout' => 'users#logout'
+
   resources :users, :only => [:show, :update, :edit]
   resources :subscribers
 
