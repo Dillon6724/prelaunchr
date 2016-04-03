@@ -29,17 +29,62 @@
     <p>If this website isn’t working, please email ohhello@verilymag.com.</p>
   </div>
 
-  <div class="buttons">
-      <!-- <%= link_to "MY ACCOUNT", user_path(@user.id) if @user %>
-      <%= link_to "MY REWARDS", refer_a_friend_url if @user %> -->
-  </div>
+  <% if !@user %>
+    <div class="buttons">
+      <%= link_to "BACK TO VERILY", root_url %>
+    </div>
+
+    <% if !@subscriber %>
+      <% if @potential_subscriber %>
+        <%= form_for(@subscriber) do |f| %>
+          <% if @subscriber.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+              <ul>
+              <% @subscriber.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :email %><br>
+            <%= f.text_field :email %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      <% elsif #this is a potential ambassador %>
+      <%= form_for(@subscriber) do |f| %>
+        <% if @subscriber.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+            <ul>
+            <% @subscriber.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :email %><br>
+          <%= f.text_field :email %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+      <% end %>
+    <% end %>
+
+  <% end %>
 
   <div class="faq_thank_you">
     Thank you for supporting Verily!
   </div>
-  <!-- <div class="social-links">
-    <a href="http://www.facebook.com/verilymag" class="fb" target="_blank"></a>
-    <a href="http://twitter.com/verilymag" class="twit" target="_blank"></a>
-    <a href="https://plus.google.com/s/verily%20magazine/top" class="goog" target="_blank"></a>
-  </div> -->
 </section>

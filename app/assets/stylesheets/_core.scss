@@ -236,6 +236,20 @@ html.home{
 	text-align: center;
 }
 
+.code-link {
+	border: 1px solid #D1D0C7;
+	background: #FFF;
+	padding: 10px 0;
+	width: 380px;
+	font-family: "proxima-nova";
+	text-transform: none;
+	font-weight: bold;
+	font-size: 11px;
+	margin: 10px auto 0;
+	letter-spacing: .13em;
+	text-align: center;
+}
+
 .bottom_link {
 	text-align: center;
 	clear: both;
@@ -518,11 +532,14 @@ html.home{
 .user-info li {
 	list-style: none;
 	line-height: 1.5em;
+	text-align: left;
 }
 
 #show .edit-button {
 	text-align: center;
 	clear: both;
+	margin-top: 20px;
+	margin-bottom: 70px;
 	a {
 		padding: 10px 30px 10px 30px;
 		text-transform: uppercase;
@@ -543,6 +560,7 @@ html.home{
 }
 
 #show .blogger-badge {
+	margin-top: 60px;
 	h1 {
 		font-family: "freight-big-pro";
 		text-transform: uppercase;

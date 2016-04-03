@@ -329,7 +329,7 @@ form, form div, input { display: inline; }
 }
 
 .find_out_more {
-  margin-top: 70px;
+  margin-top: 40px;
   text-transform: uppercase;
   font-weight: 100;
   font-family: "proxima-nova", sans-serif;
@@ -340,6 +340,25 @@ form, form div, input { display: inline; }
     background-color: #ebebeb;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.visit_verily {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1em;
+  letter-spacing: 2px;
+  @media screen and (max-width: 1023px){
+    margin-top: 10px;
+    background-color: #ebebeb;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   a {
     text-decoration: none;

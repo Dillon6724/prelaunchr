@@ -11,6 +11,8 @@ class UsersController < ApplicationController
     if params[:REF]
       cookies[:h_ref] = { value: params[:REF]}
       redirect_to new_subscriber_url and return
+    elsif cookies[:h_ref]
+      redirect_to new_subscriber_url and return
     end
 
     @user = User.new
@@ -94,6 +96,11 @@ class UsersController < ApplicationController
 
   def faq
     @user = User.find_by_email(cookies[:h_email])
+    if cookies[:h_subscriber]
+      @subscriber = Subscriber.find_by_email(cookies[:h_email])
+    elsif cookies[:h_ref]
+      @potential_subscriber = true
+    end
   end
 
   def redirect
