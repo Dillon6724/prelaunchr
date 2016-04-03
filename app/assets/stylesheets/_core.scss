@@ -616,6 +616,68 @@ html.home{
 	color: white;
 }
 
+#subscriber_signup {
+	h3 {
+		font-size: 0.7em;
+	}
+	p {
+		&.headtitle {
+			letter-spacing: 2px;
+			padding-left: 60px;
+		}
+	}
+	.cover-title {
+		position: relative;
+		left: 100px;
+		top: 100px;
+		line-height: 0.8em;
+	}
+	.subtitle {
+		margin-top: 40px;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		color: #374eb5;
+		font-weight: 100;
+		opacity: 0.8;
+		position: relative;
+		left: 100px;
+		top: 100px;
+		text-align: center;
+	}
+	@media screen and (min-width: 1024px){
+		background-image: url(/assets/home/landing_sub.png) !important;
+	}
+	.signup_forms {
+		width: 360px;
+		padding-top: 20px;
+		padding-bottom: 40px;
+		margin: 0 auto;
+		background-color: #e2e6eb;
+		p {
+			font-size: 10px;
+			letter-spacing: 2px;
+		}
+		.new_subscriber_form {
+			width: 256px;
+			margin: 0 auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	.find_out_more {
+		margin-top: 20px;
+		p {
+			font-size: 12px;
+			text-transform: none;
+			margin-top: 4px;
+		}
+	}
+	.social-links {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
 ///// edit page
 
 ///// media queries

@@ -7,16 +7,12 @@
 }
 
 #home #main,
-#subscriber-landing {
-	height: 100vh;
+#subscriber-landing,
+#subscriber_signup {
+	min-height: 100vh;
+  height: 100%;
   top: 0px;
 	width: 100%;
-  @media screen and (min-width: 1024px){
-    background-image: url(/assets/home/landing_bg.png);
-    background-size: cover;
-    background-position: center center;
-  	background-repeat: no-repeat;
-  }
   @media screen and (max-width: 1023px){
     background-image: none !important;
     height: auto;
@@ -74,6 +70,10 @@
 
 .freight {
   font-family: "freight-big-pro", serif !important;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .verily_logo_show {
@@ -497,6 +497,7 @@ aside h4{
 }
 
 #faq {
+  text-align: center;
   .faq-box {
     margin-top: 100px;
     margin-right: 200px;
@@ -520,6 +521,14 @@ aside h4{
       letter-spacing: 2px;
       margin-bottom: 20px;
     }
+  }
+  .buttons {
+    display: inline-block;
+  }
+  .signup_form_wrapper {
+    margin-top: 14px;
+    vertical-align: top;
+    display: inline-block;
   }
 }
 

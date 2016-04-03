@@ -1,4 +1,4 @@
-<%= form_for(@subscriber) do |f| %>
+<!-- <%= form_for(@subscriber) do |f| %>
   <% if @subscriber.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
@@ -18,4 +18,9 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %> -->
+
+<%= form_for @subscriber, :html => {novalidate: false, class: "form-inline add_user", id: "new_user"}, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :email, :placeholder => "Enter your email", :class => "email form-inline" %>
+  <input class="form-group submit form-inline" name="commit" type="submit" value="SIGN UP" />
 <% end %>

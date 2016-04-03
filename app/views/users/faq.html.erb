@@ -29,62 +29,42 @@
     <p>If this website isn’t working, please email ohhello@verilymag.com.</p>
   </div>
 
-  <% if !@user %>
+  <div class="faq_thank_you">
+    Thank you for supporting Verily!
+  </div>
+
+  <% if !@is_user %>
     <div class="buttons">
       <%= link_to "BACK TO VERILY", root_url %>
     </div>
 
-    <% if !@subscriber %>
-      <% if @potential_subscriber %>
-        <%= form_for(@subscriber) do |f| %>
-          <% if @subscriber.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+    <% if @potential_user%>
+      <div class='signup_form_wrapper'>
+        <p class='ready'>Ready to Join?</p>
+        <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
+          <%= render "campaign_ongoing" %>
+        </div>
+      </div>
+    <% end %>
 
-              <ul>
-              <% @subscriber.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
-            </div>
+    <% if @potential_subscriber%>
+      <div class='signup_form_wrapper'>
+        <p class='ready'>Ready to Join?</p>
+        <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
+          <%= form_for @subscriber, :html => {novalidate: false, class: "form-inline add_user", id: "new_user"}, :url => { :action => "create", :controller => "subscribers" } do |f| %>
+            <%= f.text_field :email, :placeholder => "Enter your email", :class => "email form-inline" %>
+            <input class="form-group submit form-inline" name="commit" type="submit" value="SIGN UP" />
           <% end %>
-
-          <div class="field">
-            <%= f.label :email %><br>
-            <%= f.text_field :email %>
-          </div>
-          <div class="actions">
-            <%= f.submit %>
-          </div>
-        <% end %>
-      <% elsif #this is a potential ambassador %>
-      <%= form_for(@subscriber) do |f| %>
-        <% if @subscriber.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
-
-            <ul>
-            <% @subscriber.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-
-        <div class="field">
-          <%= f.label :email %><br>
-          <%= f.text_field :email %>
         </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-      <% end %>
+      </div>
     <% end %>
 
   <% end %>
 
-  <div class="faq_thank_you">
-    Thank you for supporting Verily!
+  <div class="social-links">
+    <a href="http://www.facebook.com/verilymag" class="fb" target="_blank"></a>
+    <a href="http://twitter.com/verilymag" class="twit" target="_blank"></a>
+    <a href="https://www.instagram.com/verilymag/" class="insta" target="_blank"></a>
   </div>
+
 </section>

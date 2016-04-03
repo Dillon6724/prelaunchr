@@ -21,6 +21,7 @@ class SubscribersController < InheritedResources::Base
 
     if @subscriber.save
       cookies[:h_subscriber] = { value: "true"}
+      cookies.delete :h_ref
       redirect_to subscribers_url and return # REDIRECT WHERE, EXACTLY?
     else
       logger.info("Error saving user with email, #{email}")

@@ -95,11 +95,22 @@ class UsersController < ApplicationController
   end
 
   def faq
-    @user = User.find_by_email(cookies[:h_email])
-    if cookies[:h_subscriber]
-      @subscriber = Subscriber.find_by_email(cookies[:h_email])
+    if cookies[:h_email]
+      @user = User.find_by_email(cookies[:h_email])
+      @is_user = true
+      @potential_user = false
+      @potential_subscriber = false
+    elsif cookies[:h_subscriber]
+      @potential_subscriber = false
+      @potential_user = false
     elsif cookies[:h_ref]
       @potential_subscriber = true
+      @subscriber = Subscriber.new
+    else
+      @user = User.new
+      @is_user = false
+      @potential_user = true
+      @potential_subscriber = false
     end
   end
 
