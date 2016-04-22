@@ -2,7 +2,7 @@
   <%= form_for @user, :html => {novalidate: false, class: "form-inline edit_user", id: "edit_user"}, :url => { :action => "update" } do |f| %>
     <%= f.text_field :first_name, :value => @user.first_name, :placeholder => "First Name", :class => "input first_name form-inline" %>
     <%= f.text_field :last_name, :value => @user.last_name, :placeholder => "Last Name", :class => "input last_name form-inline" %>
-    <%= f.text_field :age, :value => @user.age, :placeholder => "Age", :class => "input age form-inline" %>
+    <%= f.text_field :age, :value => @user.dob, :placeholder => "Date of Birth", :class => "input age form-inline" %>
     <%= f.text_field :street_address, :value => @user.street_address, :placeholder => "Street Address", :class => "input address form-inline" %>
     <%= f.text_field :city, :value => @user.city, :placeholder => "City", :class => "input city form-inline" %>
     <%= f.text_field :state, :value => @user.state, :placeholder => "State", :class => "input state form-inline" %>

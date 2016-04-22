@@ -72,7 +72,7 @@ class UsersController < ApplicationController
     @user.email = params[:user][:email]
     @user.first_name = params[:user][:first_name]
     @user.last_name = params[:user][:last_name]
-    @user.age = params[:user][:age]
+    @user.dob = params[:user][:dob]
     @user.street_address = params[:user][:street_address]
     @user.city = params[:user][:city]
     @user.state = params[:user][:state]
