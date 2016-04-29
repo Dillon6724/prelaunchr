@@ -8,8 +8,12 @@
     <%= f.text_field :state, :value => @user.state, :placeholder => "State", :class => "input state form-inline" %>
     <%= f.text_field :zip, :value => @user.zip, :placeholder => "ZIP", :class => "input zip form-inline" %>
     <%= f.text_field :occupation, :value => @user.occupation, :placeholder => "Occupation", :class => "input occupation form-inline" %>
-    <%= f.text_field :how_long, :value => @user.how_long, :placeholder => "How long have you been reading Verily?", :class => "input how_long form-inline" %>
-    <%= f.text_field :how_heard, :value => @user.how_heard, :placeholder => "How did you learn about Verily?", :class => "input how_heard form-inline" %>
+    <%= f.select :how_long, options_for_select([['I just heard about it','a'],['A few months','b'],['6+ months','c'],['About a year','c'],['Over a year','c'],['2+ years','c'],['Ive been a loyal fan from the start','c']], params[:how_long]) {}, prompt: "How Long Have You Been Reading Verily" %>
+    <!-- # :value => @user.how_long, :placeholder => "How long have you been reading Verily?", :class => "input how_long form-inline" %> -->
+    <%= f.select :how_heard, options_for_select([['Someone invited me via the VIP program','a'],['A friend shared
+an article','b'],['I heard about it via a Podcast','c'],['I read an article about it','c'],['I
+saw an ad on social media','c'],['I came across it on Instagram','c']], params[:how_heard]) {}, prompt: "How Did You Learn About Verily" %>
+    <!-- <%= f.text_field :how_heard, :value => @user.how_heard, :placeholder => "How did you learn about Verily?", :class => "input how_heard form-inline" %> -->
     <%= f.text_field :email, :value => @user.email, :placeholder => "Enter your email", :class => "email input form-inline" %>
     <input class="form-group submit form-inline" name="commit" type="submit" value="SUBMIT" />
   <% end %>
