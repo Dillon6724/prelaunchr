@@ -9,8 +9,7 @@
 #home #main,
 #subscriber-landing,
 #subscriber_signup {
-	min-height: 100vh;
-  height: 100%;
+  height: 701px;
   top: 0px;
 	width: 100%;
   @media screen and (min-width: 1024px){
@@ -137,7 +136,7 @@
 form, form div, input { display: inline; }
 
 .cover-title{
-	font-size: 36px;
+	font-size: 30px;
 	color: black;
 	font-weight: 100;
 	font-family: "proxima-nova", sans-serif;
@@ -505,12 +504,13 @@ aside h4{
 #faq {
   text-align: center;
   .faq-box {
+    text-align: left;
     margin-top: 100px;
     margin-right: 200px;
     margin-left: 200px;
     @media (max-width: 1280px) {
-      margin-right: 10vw;
-      margin-left: 10vw;
+      margin-right: 14vw;
+      margin-left: 14vw;
     }
     h1 {
       color: #1c4677;
