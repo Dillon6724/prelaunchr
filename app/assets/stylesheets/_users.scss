@@ -506,7 +506,8 @@ aside h4{
 #faq {
   text-align: center;
   .faq-box {
-    text-align: left;
+    word-wrap: break-word;
+    text-align: justify;;
     margin-top: 100px;
     margin-right: 200px;
     margin-left: 200px;
