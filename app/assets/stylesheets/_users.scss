@@ -569,7 +569,8 @@ aside h4{
 .edit_form {
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 70px;
+  margin-bottom: 120px;
 }
 
 .edit_user {
@@ -808,4 +809,9 @@ select {
   width: 567px;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
+}
+
+
+.edit-form-container {
+  margin-bottom: 10%;
 }
