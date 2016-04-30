@@ -8,16 +8,16 @@
   <title>Verily VIPs</title>
   <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-
+<!-- Facebook -->
   <meta property="og:title" content="Get to Know Verily"/>
   <meta property="og:description" content="Join an awesome community of women striving to be the best version of themselves."/>
   <meta property="og:image" content="<%= asset_path("verily_logo.png") %>"/>
   <meta property="og:url" content="<%= root_url %>"/>
+<!-- Google+ -->
+  <meta itemprop="name" content="Get to Know Verily">
+  <meta itemprop="description" content="oin an awesome community of women striving to be the best version of themselves.">
+  <meta itemprop="image" content="pure-cove-10014.herokuapp.com">
 
-  <meta name="twitter:title" content="Page Title">
-  <meta name="twitter:description" content="Page description less than 200 characters">
-
-  
   <% if @is_mobile %>
     <% if @bodyId == 'home' %>
       <meta name="viewport" content="width=1600" />
