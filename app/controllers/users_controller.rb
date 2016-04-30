@@ -46,6 +46,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.nil?
+        flash[:notice] = "We don't recognize that email, please sign up!"
         format.html { redirect_to root_path, alert: 'Something went wrong!' }
       else
         cookies[:h_email] = { value: @user.email }

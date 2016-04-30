@@ -23,6 +23,9 @@
           <div id='form-wrapper_2'>
             <%= render "users/campaign_login" %>
           </div>
+          <% if flash[:notice] %>
+            <div class="notice"><%= flash[:notice] %></div>
+          <% end %>
         </div>
       <% end %>
     </div>
