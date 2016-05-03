@@ -23,11 +23,16 @@ class UsersController < ApplicationController
   end
 
   def create
+
     ref_code = cookies[:h_ref].downcase if cookies[:h_ref]
     email = params[:user][:email]
+    first_name = params[:user][:first_name]
+    last_name = params[:user][:last_name]
+    print params
     @user = User.new(email: email)
     cookies[:h_email] = { value: @user.email }
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
+
 
     if @user.save
       cookies[:h_email] = { value: @user.email }
@@ -39,9 +44,9 @@ class UsersController < ApplicationController
   end
 
   def refer
+
     @bodyId = 'refer'
     @is_mobile = mobile_device?
-
     @user = User.find_by_email(cookies[:h_email] || params[:user][:email])
 
     respond_to do |format|
@@ -81,10 +86,37 @@ class UsersController < ApplicationController
     @user.occupation = params[:user][:occupation]
     @user.how_long = params[:user][:how_long]
     @user.how_heard = params[:user][:how_heard]
+    converted = Date.parse(@user.dob.to_s).strftime("%m/%y")
+
 
     if @user.save
-      cookies[:h_email] = { value: @user.email }
-      redirect_to '/refer-a-friend'
+      begin
+        @list_id = ENV["MAILCHIMP_LIST_ID"]
+        gb = Gibbon::Request.new
+
+        gb.lists(ENV["MAILCHIMP_LIST_ID"]).members.create(body: {
+          email_address: @user.email,
+          status: "subscribed",
+          merge_fields: {
+            FNAME: @user.first_name,
+            LNAME: @user.last_name,
+            DOB: converted,
+            ADDRESS: @user.street_address,
+            CTY: @user.city,
+            STATE: @user.state,
+            ZIP: @user.zip,
+            OCCUPATION: @user.occupation,
+            HOW_LONG: @user.how_long,
+            HOW_HEARD: @user.how_heard
+          }
+        })
+        redirect_to '/refer-a-friend'
+        cookies[:h_email] = { value: @user.email }
+      rescue Gibbon::MailChimpError => e
+        puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+        redirect_to '/'
+      end
+
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to root_path, alert: 'Something went wrong!'

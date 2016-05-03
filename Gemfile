@@ -8,7 +8,7 @@ gem 'devise'
 gem 'pg'
 gem 'rails', '4.2.5.2'
 gem 'unicorn'
- gem 'gibbon', git: 'git://github.co/amro/gibbon.git'
+gem 'gibbon', git: "https://github.com/amro/gibbon.git"
 
 
 # Gems used only for assets and not required
