@@ -607,19 +607,23 @@ aside h4{
 }
 
 .edit_user .first_name,
-.edit_user .last_name,
+.edit_user .last_name {
+  width: 144px;
+}
+
+
 .edit_user .address {
-  width: 200px;
+  width: 194px;
 }
 
 .edit_user .age {
-  width: 1.2em;
+  width: 10.2em;
   text-align: center;
   float: left;
 }
 
 .edit_user .state {
-  width: 1.2em;
+  width: 1.9em;
   text-align: center;
 }
 

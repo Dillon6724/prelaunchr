@@ -20,9 +20,22 @@ class SubscribersController < InheritedResources::Base
     @subscriber.referrer = User.find_by_referral_code(ref_code) if ref_code
 
     if @subscriber.save
-      cookies[:h_subscriber] = { value: "true"}
-      cookies.delete :h_ref
-      redirect_to subscribers_url and return # REDIRECT WHERE, EXACTLY?
+      begin
+        gb = Gibbon::Request.new
+        gb.lists(ENV["NEWSLETTER_LIST_ID"]).members.create(body: {
+          email_address: email,
+          status: "subscribed",
+          merge_fields: {
+            SOURCE: "VIP"
+          }
+        })
+        cookies[:h_subscriber] = { value: "true"}
+        cookies.delete :h_ref
+        redirect_to subscribers_url and return # REDIRECT WHERE, EXACTLY?
+      rescue Gibbon::MailChimpError => e
+        puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+        redirect_to new_subscriber_url, alert: 'Something went wrong!'
+      end
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to new_subscriber_url, alert: 'Something went wrong!'
