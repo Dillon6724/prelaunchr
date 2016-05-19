@@ -12,11 +12,16 @@ form{
     clear: both;
 }
 
+html {
+	height: 0;
+}
+
 
 /* Home */
 
 html.home{
 	background-color: white;
+	height: 0;
 }
 
 #home .form-wrap.ended{
@@ -569,7 +574,7 @@ html.home{
 #show .blogger-badge {
 	margin-top: 60px;
 	h1 {
-		font-family: "freight-big-pro";
+		font-family: "proxima-nova";
 		text-transform: uppercase;
 		letter-spacing: 4px;
 	}
