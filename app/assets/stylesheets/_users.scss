@@ -17,10 +17,10 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    top: 340px;
-    position: absolute;
-    height: 1000px;
-    left: -100px;
+    // top: 340px;
+    // position: absolute;
+    // height: 1000px;
+    // left: -100px;
   }
   @media screen and (max-width: 1023px){
     background-image: none !important;
@@ -831,64 +831,64 @@ select {
   font-weight: bold;
 }
 
-@media screen and (min-width: 1024px){
-  .verily_logo img {
-    height: 250px;
-    width: 300px;
-    position: absolute;
-    top: -329px;
-    left: 750px;
-  }
-
-  .verily_logo p {
-    font-weight: 500;
-    top: -111px;
-    left: -662px;
-    font-size: 3.8em
-  }
-
-  .cover-title {
-    font-size: 40px;
-    font-weight: 400;
-    margin-left: -40%;
-  }
-  .cover-subtitle {
-    line-height: 77px;
-    font-size: 37px;
-    max-width: 700px;
-  }
-
-  .signup_form_wrapper {
-    display: block;
-  }
-
-  .find_out_more {
-    background-color: lightgray;
-    font-weight: 600;
-    display: block;
-    text-align: center;
-    margin-left: -541px;
-    padding: 5%;
-  }
-
-  .visit_verily {
-    font-weight: 600;
-    display: block;
-    text-align: center;
-    margin-left: -541px;
-    padding: 5%;
-  }
-
-  .signup_forms {
-    margin: 15% 68% 12% 0;
-    display: inline-block;
-  }
-
-  .ready {
-    font-size: 48px;
-    width: 151%;
-    margin-top: 27%;
-    padding: 11%;
-    border-top: 1px solid black;
-  }
-}
+// @media screen and (min-width: 1024px){
+//   .verily_logo img {
+//     height: 250px;
+//     width: 300px;
+//     position: absolute;
+//     top: -329px;
+//     left: 750px;
+//   }
+//
+//   .verily_logo p {
+//     font-weight: 500;
+//     top: -111px;
+//     left: -662px;
+//     font-size: 3.8em
+//   }
+//
+//   .cover-title {
+//     font-size: 40px;
+//     font-weight: 400;
+//     margin-left: -40%;
+//   }
+//   .cover-subtitle {
+//     line-height: 77px;
+//     font-size: 37px;
+//     max-width: 700px;
+//   }
+//
+//   .signup_form_wrapper {
+//     display: block;
+//   }
+//
+//   .find_out_more {
+//     background-color: lightgray;
+//     font-weight: 600;
+//     display: block;
+//     text-align: center;
+//     margin-left: -541px;
+//     padding: 5%;
+//   }
+//
+//   .visit_verily {
+//     font-weight: 600;
+//     display: block;
+//     text-align: center;
+//     margin-left: -541px;
+//     padding: 5%;
+//   }
+//
+//   .signup_forms {
+//     margin: 15% 68% 12% 0;
+//     display: inline-block;
+//   }
+//
+//   .ready {
+//     font-size: 48px;
+//     width: 151%;
+//     margin-top: 27%;
+//     padding: 11%;
+//     border-top: 1px solid black;
+//   }
+// }
