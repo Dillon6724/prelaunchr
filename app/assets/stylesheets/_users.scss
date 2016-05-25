@@ -916,13 +916,13 @@ select {
       width: 65%;
   }
 
-  .verily_logo img {
+  .verily_logo img{
       height: 80px;
       width: 119px;
       margin: 59px -22px;
   }
 
-  .verily_logo {
+  .verily_logo{
       text-align: right;
       padding-bottom: -20px;
       height: 38px;
@@ -992,6 +992,7 @@ select {
   background-repeat: no-repeat;
   height: 173px;
   margin-bottom: -14%;
+  margin-top: -38px;
 }
 
 .edit_user .first_name, .edit_user .last_name, .edit_user .age,
@@ -1018,5 +1019,31 @@ select {
 #user_how_long, #user_how_heard {
   width: 93%
 }
+
+#edit .verily_logo .vip {
+  left: 64px;
+  font-size: 17px;
+  top: -55px !important;
+  font-weight: 500;
+}
+
+#edit .title {
+  font-size: 14px;
+  position: absolute;
+  top: 122px;
+  left: 163px;
+  font-weight: 300;
+}
+
+#edit .title > .underline {
+  position: relative;
+  top: -24px;
+}
+
+#edit .verily_logo img {
+  height: 64px;
+  width: 84px;
+}
+
 
 }
