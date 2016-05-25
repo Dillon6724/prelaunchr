@@ -17,10 +17,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    // top: 340px;
-    // position: absolute;
-    // height: 1000px;
-    // left: -100px;
   }
   @media screen and (max-width: 1023px){
     background-image: none !important;
@@ -132,7 +128,8 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 500px !important;
+    width: 900px;
   }
   @media screen and (max-width: 600px){
     height: 250px;
@@ -213,6 +210,7 @@ form, form div, input { display: inline; }
   @media screen and (max-width: 1023px){
     margin-top: 30px;
     margin-right: 100px;
+    display: block;
   }
   @media screen and (max-width: 800px){
     margin-top: 30px;
@@ -367,7 +365,7 @@ form, form div, input { display: inline; }
   letter-spacing: 2px;
   @media screen and (max-width: 1023px){
     margin-top: 10px;
-    background-color: #ebebeb;
+    background-color: none;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -947,4 +945,18 @@ select {
       font-size: 38px;
   }
 
+  .add_user .email {
+    height: 44px;
+    width: 38%;
+    padding: 0;
+    margin-left: 32%;
+  }
+
+  #form-wrapper_1 {
+    width: 900px;
+  }
+
+  .add_user .submit {
+    float: left;
+  }
 }
