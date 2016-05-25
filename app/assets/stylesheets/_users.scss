@@ -978,4 +978,45 @@ select {
     color: #182343;
     font-weight: 500;
 }
+
+// SECOND PAGE
+
+.header_nav {
+  display: none;
+}
+
+#refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
+  background-image: url(/assets/dashboard/hero.png);
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  height: 173px;
+  margin-bottom: -14%;
+}
+
+.edit_user .first_name, .edit_user .last_name, .edit_user .age,
+.edit_user .address, .edit_user .city, .edit_user .occupation,
+.edit_user .input {
+    width: 87%;
+    text-align: left;
+}
+
+.edit_user .state {
+  width: 21%;
+}
+
+.edit_user .zip {
+  width: 56%;
+  margin-left: -12px
+}
+
+.edit_user .submit {
+  width: 80%;
+  text-align: center;;
+}
+
+#user_how_long, #user_how_heard {
+  width: 93%
+}
+
 }
