@@ -908,7 +908,7 @@ select {
   .cover-subtitle {
       margin: 10%;
       margin-top: 58%;
-      margin-bottom: 1%;
+      margin-bottom: 10%;
       float: left;
       font-size: 22px;
       letter-spacing: 1px;
@@ -950,10 +950,10 @@ select {
   }
 
   .add_user .email {
-    height: 44px;
-    width: 38%;
-    padding: 0;
-    margin-left: 32%;
+      height: 44px;
+      width: 24%;
+      padding: 0;
+      margin-left: -2%;
   }
 
   #form-wrapper_1 {
@@ -962,5 +962,20 @@ select {
 
   .add_user .submit {
     float: left;
+    height: 45px;
   }
+
+  .already {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .find_out_more a {
+    margin-top: 90px;
+    color: #182343;
+    font-weight: 500;
+}
 }
