@@ -17,6 +17,10 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    // top: 340px;
+    // position: absolute;
+    // height: 1000px;
+    // left: -100px;
   }
   @media screen and (max-width: 1023px){
     background-image: none !important;
@@ -128,8 +132,7 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    height: 500px !important;
-    width: 900px;
+    height: 500px;
   }
   @media screen and (max-width: 600px){
     height: 250px;
