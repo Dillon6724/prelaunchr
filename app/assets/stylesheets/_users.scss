@@ -982,7 +982,11 @@ select {
 // SECOND PAGE
 
 .header_nav {
-  display: none;
+  font-size: 10px;
+}
+
+.header_nav a {
+  margin: -6%;
 }
 
 #refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
@@ -1030,7 +1034,7 @@ select {
 #edit .title {
   font-size: 14px;
   position: absolute;
-  top: 122px;
+  top: 150px;
   left: 163px;
   font-weight: 300;
 }
@@ -1100,5 +1104,46 @@ select {
     left: 86px;
     top: -93px;
 }
+
+#show .blue {
+    margin-left: 26%;
+    margin-top: 20%;
+
+}
+
+.user-info li {
+  margin-left: 0;
+  display: inline;
+}
+
+#show .title, #edit .title {
+    font-size: 16px;
+    margin-left: 38%;
+    padding-top: 28%;
+}
+
+#show .verily_logo img, #edit .verily_logo img {
+    height: 67px;
+    margin-top: 15px;
+}
+
+#show .verily_logo .vip, #edit .verily_logo .vip {
+    top: -58px !important;
+    font-size: 1.2em;
+    left: 55px;
+    font-weight: 400;
+}
+
+.code-link {
+    width: 305px;
+    overflow: scroll;
+}
+
+#show .user-details {
+    display: inline;
+}
+
+
+
 
 }
