@@ -1143,7 +1143,50 @@ select {
     display: inline;
 }
 
+#subscriber_signup p.headtitle {
+    display: none;
+}
 
+#subscriber_signup .find_out_more {
+    width: 0;
+}
+
+#subscriber_signup .signup_forms p, #subscriber_signup .signup_forms {
+    background-color: white;
+}
+
+.cover-subtitle {
+  margin: 7%;
+  margin-top: 71%;
+  letter-spacing: 1px;
+  line-height: 34px;
+  width: 72%;
+}
+
+.new_sus img{
+  margin-top: 8%;
+  margin-right: -3%;
+}
+
+
+#subscriber_signup .cover-title {
+  left: 127px;
+  top: 82px;
+  font-weight: 600;
+}
+
+#subscriber_signup .subtitle {
+  width: 200px;
+  margin-top: -75px;
+  position: relative;
+  top: 204px;
+  left: 160px;
+  font-weight: 500;
+}
+
+.new-sus-proxima {
+  font-size: 15px;
+}
 
 
 }
