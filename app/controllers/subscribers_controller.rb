@@ -26,7 +26,7 @@ class SubscribersController < InheritedResources::Base
           email_address: email,
           status: "subscribed",
           merge_fields: {
-            SOURCE: "VIP"
+            MMERGE2: "VIP"
           }
         })
         cookies[:h_subscriber] = { value: "true"}
