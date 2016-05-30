@@ -548,8 +548,8 @@ aside h4{
 }
 
 .faq-hero {
-  height: 470px;
-  width: 100vw;
+  height: 50vw;
+  width: 100%;
   background-image: url(/assets/dashboard/hero.png);
   background-size: cover;
   background-position: top center;
@@ -560,9 +560,10 @@ aside h4{
   .cover-title {
     clear: both;
     position: relative;
-    left: 10%;
+    left: 32%;
+    top: 77%;
     @media (max-width: 768px) {
-      left: 0%;
+      left: 40%;
     }
   }
   .verily_logo {
@@ -575,7 +576,7 @@ aside h4{
 .edit_form {
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 17%;
   margin-bottom: 120px;
 }
 
@@ -832,74 +833,12 @@ select {
   font-weight: bold;
 }
 
-// @media screen and (min-width: 1024px){
-//   .verily_logo img {
-//     height: 250px;
-//     width: 300px;
-//     position: absolute;
-//     top: -329px;
-//     left: 750px;
-//   }
-//
-//   .verily_logo p {
-//     font-weight: 500;
-//     top: -111px;
-//     left: -662px;
-//     font-size: 3.8em
-//   }
-//
-//   .cover-title {
-//     font-size: 40px;
-//     font-weight: 400;
-//     margin-left: -40%;
-//   }
-//   .cover-subtitle {
-//     line-height: 77px;
-//     font-size: 37px;
-//     max-width: 700px;
-//   }
-//
-//   .signup_form_wrapper {
-//     display: block;
-//   }
-//
-//   .find_out_more {
-//     background-color: lightgray;
-//     font-weight: 600;
-//     display: block;
-//     text-align: center;
-//     margin-left: -541px;
-//     padding: 5%;
-//   }
-//
-//   .visit_verily {
-//     font-weight: 600;
-//     display: block;
-//     text-align: center;
-//     margin-left: -541px;
-//     padding: 5%;
-//   }
-//
-//   .signup_forms {
-//     margin: 15% 68% 12% 0;
-//     display: inline-block;
-//   }
-//
-//   .ready {
-//     font-size: 48px;
-//     width: 151%;
-//     margin-top: 27%;
-//     padding: 11%;
-//     border-top: 1px solid black;
-//   }
-// }
 
 
 
-
-
-
-
+/////////////////////////////////
+////////// RESPONSIVE ///////////
+////////////////////////////////
 
 
 
@@ -942,18 +881,19 @@ select {
   }
 
   .cover-title {
-      position: relative;
-      top: 152px;
-      width: 235px;
-      left: 150px;
-      font-size: 14px;
+    position: relative;
+    top: 55%;
+    width: 39%;
+    left: 53%;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   .add_user .email {
-      height: 44px;
-      width: 24%;
-      padding: 0;
-      margin-left: -2%;
+    height: 44px;
+    width: 14%;
+    padding: 0;
+    margin-left: 6%;
   }
 
   #form-wrapper_1 {
@@ -1004,6 +944,7 @@ select {
 .edit_user .input {
     width: 87%;
     text-align: left;
+    margin: 4%;
 }
 
 .edit_user .state {
@@ -1079,7 +1020,7 @@ select {
 
 
 #refer .prizes .products li.product .stop_count {
-    width: 268px;
+    width: 43%;
     font-size: 13px;
     margin-left: 32px;
 }
@@ -1117,21 +1058,25 @@ select {
 }
 
 #show .title, #edit .title {
-    font-size: 16px;
-    margin-left: 38%;
-    padding-top: 28%;
+  font-size: 14px;
+  left: 49%;
+  margin-top: 0%;
+  width: 156px;
+  position: absolute;
 }
 
 #show .verily_logo img, #edit .verily_logo img {
-    height: 67px;
-    margin-top: 15px;
+  height: 67px;
+  margin-top: 15px;
+  position: absolute;
+  left: 46%;
 }
 
 #show .verily_logo .vip, #edit .verily_logo .vip {
-    top: -58px !important;
-    font-size: 1.2em;
-    left: 55px;
-    font-weight: 400;
+  top: 168% !important;
+  font-size: 1.2em;
+  left: 29%;
+  font-weight: 400;
 }
 
 .code-link {
@@ -1158,6 +1103,7 @@ select {
 .cover-subtitle {
   margin: 7%;
   margin-top: 71%;
+  margin-bottom: 25%;
   letter-spacing: 1px;
   line-height: 34px;
   width: 72%;
@@ -1184,8 +1130,47 @@ select {
   font-weight: 500;
 }
 
-.new-sus-proxima {
-  font-size: 15px;
+ .new-sus-proxima {
+   position: absolute;
+   top: 150%;
+   font-size: 20px !important;
+}
+
+
+#show .manage-subtitle {
+    top: 21%;
+    width: 59%;
+    left: 39%;
+    font-weight: 500;
+}
+
+.new_visit {
+  position: absolute;
+  top: 177%;
+  width: 100% !important;
+}
+
+#subscriber_signup .social-links {
+    margin-top: -1px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 200%;
+    left: 28%;
+    margin-bottom: 10px;
+}
+
+#subscriber_signup .cover-title {
+    left: 120px;
+    width: 77%;
+}
+
+
+#subscriber_signup .subtitle {
+  left: 160px;
+}
+
+.new_sus_img {
+  width: 113%;
 }
 
 

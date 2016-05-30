@@ -620,7 +620,7 @@ html.home{
 
 .header_nav ul li {
 	display: inline;
-	margin-right: 30px;
+	margin-right: 8%;
 }
 
 .header_nav a {
@@ -644,6 +644,7 @@ html.home{
 		left: 100px;
 		top: 100px;
 		line-height: 0.8em;
+		width: 89%;
 	}
 	.subtitle {
 		margin-top: 40px;
@@ -653,9 +654,10 @@ html.home{
 		font-weight: 100;
 		opacity: 0.8;
 		position: relative;
-		left: 100px;
+		left: 300px;
 		top: 100px;
 		text-align: center;
+		width: 40%;
 	}
 	@media screen and (min-width: 1024px){
 		background-image: url(/assets/home/landing_sub.png) !important;
@@ -665,6 +667,7 @@ html.home{
 		padding-top: 20px;
 		padding-bottom: 40px;
 		margin: 0 auto;
+		margin-top: -6%;
 		background-color: #e2e6eb;
 		p {
 			font-size: 10px;
@@ -678,7 +681,7 @@ html.home{
 		}
 	}
 	.find_out_more {
-		margin-top: 20px;
+		margin-top: -1%;
 		p {
 			font-size: 12px;
 			text-transform: none;
