@@ -1,10 +1,10 @@
 <section id='faq'>
-  <div class="hero faq-hero">
-    <div class='verily_logo'>
+  <div class="hero-ori faq-hero-ori">
+    <div class='verily_logo faq-logo'>
       <%= image_tag "verily_logo.png" %>
-      <p class='vip'>vip</p>
+      <p class='vip faq-vip'>vip</p>
     </div>
-    <h1 class="cover-title">All the Answers<br><span class="underline">&nbsp; &nbsp;</span></h1>
+    <h1 class="cover-title faq-title">All the Answers<br><span class="underline">&nbsp; &nbsp;</span></h1>
   </div>
   <div class="faq-box">
     <h1>What do Verily VIPS do?</h1>
@@ -39,38 +39,31 @@
     Thank you for supporting Verily!
   </div>
 
-  <% if !@is_user %>
+
+  <div class='signup_forms'>
+    <% if Rails.application.config.ended %>
+      <%= render "users/campaign_ended" %>
+    <% else %>
+      <div class='signup_form_wrapper'>
+        <p class='ready'>Ready to Join?</p>
+        <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
+          <%= render "users/campaign_ongoing" %>
+        </div>
+      </div>
+      <div class='signup_form_wrapper'>
+        <p class='ready already'>Already a VIP?</p>
+        <div id='form-wrapper_2'>
+          <%= render "users/campaign_login" %>
+        </div>
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
     <div class="buttons">
       <%= link_to "BACK TO VERILY", root_url %>
     </div>
-
-    <% if @potential_user%>
-      <div class='signup_form_wrapper'>
-        <p class='ready'>Ready to Join?</p>
-        <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
-          <%= render "campaign_ongoing" %>
-        </div>
-      </div>
-    <% end %>
-
-    <% if @potential_subscriber%>
-      <div class='signup_form_wrapper'>
-        <p class='ready'>Ready to Join?</p>
-        <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
-          <%= form_for @subscriber, :html => {novalidate: false, class: "form-inline add_user", id: "new_user"}, :url => { :action => "create", :controller => "subscribers" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter your email", :class => "email form-inline" %>
-            <input class="form-group submit form-inline" name="commit" type="submit" value="SIGN UP" />
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-
-  <% end %>
-
-  <div class="social-links">
-    <a href="http://www.facebook.com/verilymag" class="fb" target="_blank"></a>
-    <a href="http://twitter.com/verilymag" class="twit" target="_blank"></a>
-    <a href="https://www.instagram.com/verilymag/" class="insta" target="_blank"></a>
-  </div>
-
 </section>

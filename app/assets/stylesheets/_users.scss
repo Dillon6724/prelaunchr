@@ -35,6 +35,10 @@
   background-repeat: no-repeat;
   height: 390px;
 }
+.manage-hero {
+height: 310px;
+}
+
 
 #home #main,
 #subscriber-landing,
@@ -864,10 +868,35 @@ select {
   font-weight: bold;
 }
 
+.faq-hero-ori {
+  height: 300px;
+  margin-top: -3%;
+}
 
+.faq-title {
+  position: relative;
+  top: 45%;
+  left: 14%;
+  font-size: 1.4em;
+  width: 80%;
+  }
 
+.faq-logo img {
+    width: 120px;
+  }
 
+.faq-logo p {
+    left: -24px;
+    top: -75px;
+    font-size: 24px;
+  }
 
+  .new-sus-subtitle {
+    font-size: 17px !important;
+    margin: 66px auto;
+    width: 95%;
+    max-width: none;
+  }
 
 
 
@@ -1065,6 +1094,12 @@ select {
     height: 390px;
 }
 
+.manage-hero {
+  height: 245px;
+  margin-top: -20%;
+  width: 107%;
+}
+
 
 #refer .prizes .callout {
   font-size: 12px;
@@ -1104,9 +1139,6 @@ letter-spacing: 3px;
   width: 90%;
 }
 
-.bottom_link {
-  width: 300px;
-}
 
 #refer .prizes .products li.product {
   width: 125%;
@@ -1158,7 +1190,7 @@ letter-spacing: 3px;
 }
 
 .bottom_link {
-  width: 78%;
+  width: 82%;
 }
 
 #show .blue {
@@ -1187,6 +1219,7 @@ letter-spacing: 3px;
   margin-top: -33px;
   position: absolute;
   left: 38%;
+  top: 17%;
 }
 
 #show .verily_logo .vip, #edit .verily_logo .vip {
@@ -1198,8 +1231,14 @@ letter-spacing: 3px;
 }
 
 .code-link {
-    width: 305px;
-    overflow: scroll;
+  width: 100%;
+  overflow: scroll;
+}
+
+#show .blogger-badge .badge img {
+    height: 70px;
+    width: auto;
+    margin: 39px 24px;
 }
 
 #show .user-details {
@@ -1215,7 +1254,7 @@ letter-spacing: 3px;
 }
 
 #subscriber_signup .signup_forms p, #subscriber_signup .signup_forms {
-    background-color: white;
+    background-color: transparent;
 }
 
 .cover-subtitle {
@@ -1240,55 +1279,65 @@ letter-spacing: 3px;
 }
 
 #subscriber_signup .subtitle {
-  width: 200px;
+  width: 100%;
   margin-top: -75px;
   position: relative;
-  top: 204px;
+  top: 162px;
   left: 160px;
   font-weight: 500;
 }
 
  .new-sus-proxima {
    position: absolute;
-   top: 150%;
-   font-size: 20px !important;
+   top: 170%;
+   left: -10%;
+   font-size: 14px !important;
+   margin-left: 35px;
+   background-color: #f2f2f2 !important;
+   padding: 6% 22% 32% 21%;
+   width: 80%;
+   z-index: -1;
 }
 
 
 #show .manage-subtitle {
-    top: 21%;
-    width: 59%;
-    left: 39%;
-    font-weight: 500;
+  top: 147px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  font-weight: 200;
+  font-size: 20px;
 }
 
 .new_visit {
   position: absolute;
-  top: 177%;
-  width: 100% !important;
+  top: 195%;
+  width: 123% !important;
+  background-color: transparent;
 }
 
 #subscriber_signup .social-links {
-    margin-top: -1px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 200%;
-    left: 28%;
-    margin-bottom: 10px;
+  margin-top: 56px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 200%;
+  left: 39%;
 }
 
 #subscriber_signup .cover-title {
-    left: 120px;
-    width: 77%;
+  left: 47px;
+  font-size: 1.2em;
+  width: 82%;
+  font-weight: 400;
 }
 
 
 #subscriber_signup .subtitle {
-  left: 160px;
+  left: 18%;
 }
 
 .new_sus_img {
-  width: 113%;
+  width: 123%;
 }
 
 .welcome-subtitle {
@@ -1310,14 +1359,50 @@ letter-spacing: 3px;
   display: none;
 }
 
+.faq_thank_you {
+  color: #182343;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.faq-hero-ori {
+  height: 245px;
+}
+
+.faq-title {
+  top: 52%;
+  width: 73%;
+  left: 5%;
+}
+
+#faq .faq-box {
+  margin-top: 10%;
+}
+
+
+
+
+
+
+
 
 }
 
 
 
 
-// TABLET
 
+
+
+
+
+
+
+
+
+///////////////////////////////
+////////// TABLET /////////////
+///////////////////////////////
 
 @media only screen
 and (min-device-width : 768px)
@@ -1388,6 +1473,83 @@ and (max-device-width : 1023px)  {
 
 .hero-ori {
     height: 572px;
+}
+
+.bottom_link {
+  width: 92%
+}
+
+.manage-hero {
+  height: 380px;
+  margin-top: -10%;
+  width: 100%;
+}
+
+#show .blue {
+    margin-left: 26%;
+    margin-top: 5%;
+}
+
+#show .manage-subtitle {
+    top: 253px;
+    position: relative;
+    width: 92%;
+    left: 65px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#show .verily_logo img {
+  width: 15%;
+  margin-top: -33px;
+  position: absolute;
+  left: 52%;
+}
+
+#show .verily_logo .vip {
+  left: 28%;
+  margin-top: 13%;
+}
+
+.faq-hero-ori {
+  height: 230px;
+  background-position: inherit;
+  margin-top: 0px;
+}
+
+.faq-title {
+  left: 20%;
+}
+
+.faq-logo img {
+  margin-top: 20px;
+}
+
+
+.new-sus-proxima {
+    position: absolute;
+    top: 152%;
+    left: -10%;
+    font-size: 14px !important;
+    margin-left: 35px;
+    background-color: #f2f2f2 !important;
+    padding: 3% 22% 14% 21%;
+    width: 80%;
+    z-index: -1;
+}
+
+.new-sus-subtitle {
+  margin-bottom: 8%;
+  margin-top: 58%;
+}
+
+.new_visit {
+  top: 177%;
+  width: 100% !important;
+}
+
+#subscriber_signup .social-links {
+  top: 182%;
 }
 
 }
