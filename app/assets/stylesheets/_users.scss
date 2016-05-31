@@ -1187,6 +1187,7 @@ letter-spacing: 3px;
 
 .bottom_text {
   font-size: 11px;
+  font-family: "proxima-nova", sans-serif;
 }
 
 .bottom_link {
@@ -1593,4 +1594,24 @@ and (max-device-width : 1023px)  {
   border: 1px solid;
   padding: 4px;
   font-weight: bold;
+}
+
+.swag-description {
+  font-family: "proxima-nova", sans-serif !important;
+  text-transform: initial;
+  margin-bottom: 20px;
+}
+
+.swag-products {
+  margin-top: 25%;
+  width: 161%;
+  margin-left: -34%;
+}
+
+.swag-hero {
+  height: 300px;
+}
+
+.swag-title {
+  padding-top: 150px !important;
 }

@@ -11,6 +11,7 @@ Prelaunchr::Application.routes.draw do
 
   post 'refer-a-friend' => 'users#refer'
   get 'faq' => 'users#faq'
+  get 'swag' => 'users#swag'
 
   get 'logout' => 'users#logout'
 

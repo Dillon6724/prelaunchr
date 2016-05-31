@@ -147,6 +147,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def swag
+
+
+  end
+
   def redirect
     redirect_to root_path, status: 404
   end
