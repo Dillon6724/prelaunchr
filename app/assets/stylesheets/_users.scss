@@ -1379,7 +1379,27 @@ letter-spacing: 3px;
   margin-top: 10%;
 }
 
+.thanks-subtitle, .thanks-find-more {
+  background-color: white;
+}
 
+.thanks-subtitle {
+  background-color: white;
+  font-size: 15px;
+  margin-top: 55%;
+  line-height: 1.5;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+  margin-bottom: 9%;
+}
+.thanks-title {
+position: relative;
+top: 55%;
+width: 56%;
+left: 33%;
+font-size: 21px;
+font-weight: 500;
+}
 
 
 
@@ -1550,6 +1570,15 @@ and (max-device-width : 1023px)  {
 
 #subscriber_signup .social-links {
   top: 182%;
+}
+
+.thanks-title {
+  width: 42%;
+  left: 44%;
+}
+
+.thanks-subtitle {
+  margin-right: 115px;
 }
 
 }
