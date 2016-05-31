@@ -6,6 +6,36 @@
     width: 100%;
 }
 
+
+#refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
+    background-image: url(/assets/dashboard/hero.png);
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    height: 1065px;
+    width: 107vw;
+    top: -197px;
+    position: absolute;
+    margin-bottom: -13%;
+    z-index: -1;
+    left: -90px;
+    clip: rect(0px, 2329px, 523px, 89px);
+}
+#edit .title {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  font-size: 1.5em;
+  line-height: .8;
+}
+
+.hero-ori {
+  background-image: url(/assets/dashboard/hero-ori.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 390px;
+}
+
 #home #main,
 #subscriber-landing,
 #subscriber_signup {
@@ -577,7 +607,7 @@ aside h4{
 .edit_form {
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 17%;
+  margin-top: 24%;
   margin-bottom: 120px;
 }
 
@@ -837,6 +867,17 @@ select {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /////////////////////////////////
 ////////// MOBILE ///////////
 ////////////////////////////////
@@ -928,6 +969,15 @@ select {
 
 // SECOND PAGE
 
+
+#refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
+    height: 521px;
+    width: 140vw;
+    top: -60px;
+    left: -128px;
+    clip: rect(0px, 2327px, 302px, 89px);
+}
+
 .header_nav {
   font-size: 10px;
 }
@@ -936,14 +986,21 @@ select {
   margin: -6%;
 }
 
+
 #refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
-  background-image: url(/assets/dashboard/hero.png);
-  background-size: cover;
-  background-position: inherit;
-  background-repeat: no-repeat;
-  height: 173px;
-  margin-bottom: -14%;
-  margin-top: -38px;
+    background-image: url(/assets/dashboard/hero.png);
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    height: 453px;
+    width: 128vw;
+    top: -25px;
+    position: absolute;
+    margin-bottom: -13%;
+    z-index: -1;
+    left: -90px;
+    clip: rect(0px,2320px,262px,89px);
+
 }
 
 .edit_user .first_name, .edit_user .last_name, .edit_user .age,
@@ -979,6 +1036,10 @@ select {
   font-weight: 500;
 }
 
+.edit_form {
+  margin-top: 45%;
+}
+
 #edit .title {
   font-size: 14px;
   position: absolute;
@@ -995,17 +1056,25 @@ select {
 #edit .verily_logo img {
   height: 64px;
   width: 84px;
+  top: 18%;
+}
+
+.hero-ori {
+    background-image: url(/assets/dashboard/hero-ori.png);
+    background-position: right;
+    height: 390px;
 }
 
 
 #refer .prizes .callout {
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-top: 125%;
-    margin-left: 5%;
-    font-weight: 200;
-    width: 81%;
-    line-height: 1.4;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-top: 5%;
+  margin-left: 8%;
+  font-weight: 200;
+  width: 81%;
+  line-height: 1.4;
+  padding: 22px 0px 22px 0px;
 }
 
 #refer .share-wrap {
@@ -1014,7 +1083,21 @@ select {
 }
 
 #refer .share-wrap .title {
-  padding-top: 52%;
+  padding-top: 35%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-left: 28px;
+}
+
+#refer .share-wrap .subtitle {
+font-size: .7em;
+letter-spacing: 3px;
+}
+
+.refer-logo {
+  position: relative;
+  top: -6%;
+  left: -5%;
 }
 
 #refer .product_images {
@@ -1025,11 +1108,19 @@ select {
   width: 300px;
 }
 
+#refer .prizes .products li.product {
+  width: 125%;
+}
 
 #refer .prizes .products li.product .stop_count {
-    width: 43%;
-    font-size: 13px;
-    margin-left: 32px;
+  width: 82%;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+#refer .share-wrap .place {
+    margin-top: 0;
+    font-size: 10px;
 }
 
 
@@ -1038,19 +1129,36 @@ select {
     width: 66%;
 }
 
+#refer .product_images {
+  width: 90%;
+  margin: 17px;
+  border-bottom: 1px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+}
+
 #refer .product_images img {
     width: 31%;
     margin: 5%;
 }
 
 #refer .share-wrap .copy-link, .copy-link {
-  width: 200px;
+  width: 95%;
+  font-size: 9px;
+  margin-left: 5%;
 }
 
 #refer p {
-    font-size: 23px;
-    left: 86px;
-    top: -93px;
+    font-size: 18px;
+    left: 19%;
+    top: -71px;
+}
+
+.bottom_text {
+  font-size: 11px;
+}
+
+.bottom_link {
+  width: 78%;
 }
 
 #show .blue {
@@ -1064,26 +1172,29 @@ select {
   display: inline;
 }
 
-#show .title, #edit .title {
+ #edit .title {
   font-size: 14px;
-  left: 49%;
-  margin-top: 0%;
-  width: 156px;
-  position: absolute;
+     left: 48%;
+     margin-top: 6%;
+     width: 156px;
+     position: absolute;
+
 }
 
 #show .verily_logo img, #edit .verily_logo img {
-  height: 67px;
-  margin-top: 15px;
+  height: auto;
+  width: 25%;
+  margin-top: -33px;
   position: absolute;
-  left: 46%;
+  left: 38%;
 }
 
 #show .verily_logo .vip, #edit .verily_logo .vip {
-  top: 168% !important;
+  top: 192% !important;
   font-size: 1.2em;
-  left: 29%;
+  left: 21%;
   font-weight: 400;
+  margin-top: 26%;
 }
 
 .code-link {
@@ -1191,8 +1302,12 @@ select {
 }
 
 .signup_form_wrapper:last-of-type, #form-wrapper_1 {
+  display: inline;
+}
 
-    display: inline;
+
+#edit .title > .underline {
+  display: none;
 }
 
 
@@ -1226,10 +1341,53 @@ and (max-device-width : 1023px)  {
     width: 22%;
   }
 
-
   .verily_logo p {
     left: -16%;
     margin-top: -11%;
   }
+
+  #refer .hero, #show .hero, #edit .hero, #subscriber_signup .hero {
+    width: 107vw;
+    height: 453px;
+    top: -25px;
+    position: absolute;
+    margin-bottom: -13%;
+    z-index: -1;
+    left: -58px;
+    clip: rect(0px, 827px, 301px, 60px);
+
+  }
+
+  #edit .verily_logo img {
+    width: 18%;
+    left: 76%;
+    top: 15%;
+}
+
+#show .verily_logo .vip, #edit .verily_logo .vip {
+    top: 192% !important;
+    font-size: 1.8em;
+    left: 60%;
+    margin-top: 18%;
+  }
+
+  #edit .title {
+    width: 20%;
+    font-size: 2em;
+  }
+
+  .edit_form {
+    margin-top: 20%;
+  }
+
+  #refer p {
+    font-size: 25px;
+    left: -16%;
+    top: -81px;
+}
+
+.hero-ori {
+    height: 572px;
+}
 
 }

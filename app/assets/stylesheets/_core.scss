@@ -186,6 +186,8 @@ html.home{
     font-family: "proxima-nova", sans-serif !important;;
     width: auto;
 		font-weight: 500;
+		font-size: 12px;
+    letter-spacing: 6px;
 }
 
 #refer .share-wrap{
@@ -485,9 +487,12 @@ html.home{
 	text-align: center;
 	.verily_logo {
 		img {
-			height: 120px;
-	    width: auto;
+			height: auto;
+	    width: 130px;
 	    margin: 30px 24px;
+			position: relative;
+			top: -295px;
+			left: -45px;
 	    @media screen and (max-width: 600px) {
 	      height: 100px;
 	      width: auto;
@@ -495,16 +500,16 @@ html.home{
 		}
 		.vip {
 			text-align: center;
-			text-transform: uppercase;
-			font-weight: 100;
-			font-family: "proxima-nova", sans-serif !important;
-			font-size: 1.6em;
-			letter-spacing: 3px;
-			position: relative;
-			top: -80px !important;
+	    text-transform: uppercase;
+	    font-weight: 400;
+	    font-family: "proxima-nova", sans-serif !important;
+	    font-size: 1.6em;
+	    letter-spacing: 3px;
+	    position: relative;
+  	  top: -364px !important;
 			left: -8px;
 			@media (min-width: 1023px) {
-				left: -24px;
+				left: -65px;
 			}
 			@media screen and (max-width: 600px) {
 				top: -75px;

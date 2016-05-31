@@ -1,9 +1,9 @@
 <section id="refer">
-  <div class='verily_logo'>
+  <div class='verily_logo refer-logo'>
     <%= image_tag "verily_logo.png" %>
     <p class='vip'>vip</p>
   </div>
-  <div class="hero">
+  <div class="hero-ori">
     <div class="share-wrap">
       <p class="title proxima">Invite Your Friends And <br>Earn Rewards!<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
       <p class="subtitle proxima">Your unique share link</p>
@@ -44,7 +44,7 @@
       </div>
 
       <% if referrals_count == 0 %>
-        <p class="place proxima"><span class="big_blue">No friends</span><br/> have joined yet</p>
+        <p class="place proxima"><span class="big_blue">No friends</span><br/> have joined</p>
       <% else %>
         <p class="place proxima"><span class="big_blue"><%= referrals_count %> <%= word1 %></span><br/> <%= word2 %> joined</p>
       <% end %>
