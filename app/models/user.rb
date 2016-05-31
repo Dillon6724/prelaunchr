@@ -17,22 +17,22 @@ class User < ActiveRecord::Base
   REFERRAL_STEPS = [
     {
       'count' => 5,
-      'html' => 'Congrats, You are a VIP!',
+      'html' => 'Stickers and full VIP membership',
       'class' => 'two'
     },
     {
       'count' => 10,
-      'html' => 'Choose some Swag',
+      'html' => 'Verily tote bag with inspirational quote',
       'class' => 'three'
     },
     {
       'count' => 25,
-      'html' => 'Choose some Swag',
+      'html' => 'Verily journal with inspirational quote',
       'class' => 'four'
     },
     {
       'count' => 50,
-      'html' => 'Choose some Swag',
+      'html' => 'Three small 5” x 5” Daily Dose wall prints',
       'class' => 'five'
     }
   ]
