@@ -10,8 +10,12 @@
       <h3 class='cover-subtitle new-sus-subtitle'>Have you ever looked at mainstream women’s magazines and felt like they fail to reflect your life, philosophies, and interests? Verily was born out of a desire to start a fresh conversation about culture, beauty, relationships, and healthy living.
         <br/> <br/> Our mission is to empower and inspire women to be the best versions of themselves. We are championing diverse, real beauty with our no-photoshop policy and recognize our responsibility to affirm life-giving attitudes through our content. We would love for you to join the conversation.
       </h3>
+      <% if flash[:notice] %>
+        <div class="sus-notice"><%= flash[:notice] %></div>
+      <% end %>
     </div>
     <div class='signup_forms'>
+
       <p class='proxima new-sus-proxima'>Sign up to get a daily dose of Verily in your Inbox</p>
       <div class="new_subscriber_form">
         <%= render "form" %>

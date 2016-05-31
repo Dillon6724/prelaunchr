@@ -34,10 +34,13 @@ class SubscribersController < InheritedResources::Base
         redirect_to subscribers_url and return # REDIRECT WHERE, EXACTLY?
       rescue Gibbon::MailChimpError => e
         puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+        flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
         redirect_to new_subscriber_url, alert: 'Something went wrong!'
+
       end
     else
       logger.info("Error saving user with email, #{email}")
+      flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
       redirect_to new_subscriber_url, alert: 'Something went wrong!'
     end
   end
