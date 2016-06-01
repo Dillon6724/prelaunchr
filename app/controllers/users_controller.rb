@@ -86,7 +86,7 @@ class UsersController < ApplicationController
     @user.occupation = params[:user][:occupation]
     @user.how_long = params[:user][:how_long]
     @user.how_heard = params[:user][:how_heard]
-    converted = Date.parse(@user.dob.to_s).strftime("%m/%y")
+    converted = Date.parse(@user.dob.to_s).strftime("%m/%y") if @user.dob
 
 
     if @user.save
@@ -113,13 +113,15 @@ class UsersController < ApplicationController
         redirect_to '/refer-a-friend'
         cookies[:h_email] = { value: @user.email }
       rescue Gibbon::MailChimpError => e
+        flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
         puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
-        redirect_to '/'
+        redirect_to edit_user_url(@user.id)
       end
 
     else
+      flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
       logger.info("Error saving user with email, #{email}")
-      redirect_to root_path, alert: 'Something went wrong!'
+      redirect_to edit_user_url(@user.id), alert: 'Something went wrong!'
     end
   end
 

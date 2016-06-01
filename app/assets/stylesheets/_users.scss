@@ -900,6 +900,50 @@ select {
 
 
 
+  .sus-notice {
+    color: red;
+    margin-top: -7%;
+    margin-bottom: 7%;
+    font-size: 14px;
+    width: 97%;
+    background-color: #f2f2f2;
+    border: 1px solid;
+    padding: 4px;
+    font-weight: bold;
+  }
+
+  .swag-description {
+    font-family: "proxima-nova", sans-serif !important;
+    text-transform: initial;
+    margin-bottom: 20px;
+  }
+
+  .swag-products {
+    margin-top: 25%;
+    width: 161%;
+    margin-left: -34%;
+  }
+
+  .swag-hero {
+    height: 300px;
+  }
+
+  .swag-title {
+    padding-top: 150px !important;
+  }
+
+  .signup-notice {
+  position: absolute;
+  z-index: 999;
+  top: 48%;
+  width: 62%;
+  left: 30%;
+  font-size: 11px;
+  }
+
+
+
+
 
 
 
@@ -1403,8 +1447,20 @@ font-weight: 500;
 }
 
 
+.swag-description {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  font-size: 12px;
+}
 
+.swag-products {
+  margin-top: 41% !important;
+}
 
+.swag-hero {
+  height: 270px;
+}
 
 
 }
@@ -1582,36 +1638,20 @@ and (max-device-width : 1023px)  {
   margin-right: 115px;
 }
 
-}
-
-.sus-notice {
-  color: red;
-  margin-top: -7%;
-  margin-bottom: 7%;
-  font-size: 14px;
-  width: 97%;
-  background-color: #f2f2f2;
-  border: 1px solid;
-  padding: 4px;
-  font-weight: bold;
-}
-
-.swag-description {
-  font-family: "proxima-nova", sans-serif !important;
-  text-transform: initial;
-  margin-bottom: 20px;
-}
-
 .swag-products {
-  margin-top: 25%;
-  width: 161%;
-  margin-left: -34%;
-}
+    background-color: white;
+    margin: 50px !important;
 
-.swag-hero {
-  height: 300px;
 }
 
 .swag-title {
-  padding-top: 150px !important;
+    padding-top: 30% !important;
+}
+
+.swag-description {
+  position: absolute;
+  left: 12%;
+  width: 76%;
+}
+
 }

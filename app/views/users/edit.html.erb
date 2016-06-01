@@ -7,7 +7,12 @@
     <div class="share-wrap">
       <p class="title proxima edit-page-title">SIGN UP!<br><span class="underline">&nbsp &nbsp &nbsp</span></p>
     </div>
+    <% if flash[:notice] %>
+      <div class="sus-notice signup-notice" style="position: absolute;"><%= flash[:notice] %></div>
+    <% end %>
   </div>
+
+
 
   <%= render "user_details" %>
 

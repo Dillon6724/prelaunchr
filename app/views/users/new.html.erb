@@ -13,6 +13,9 @@
         <%= render "users/campaign_ended" %>
       <% else %>
         <div class='signup_form_wrapper'>
+          <% if flash[:notice] %>
+            <div class="notice"><%= flash[:notice] %></div>
+          <% end %>
           <p class='ready'>Ready to Join?</p>
           <div id='form-wrapper_1' class='<%= "ended" if Rails.application.config.ended %>'>
             <%= render "users/campaign_ongoing" %>
@@ -23,9 +26,6 @@
           <div id='form-wrapper_2'>
             <%= render "users/campaign_login" %>
           </div>
-          <% if flash[:notice] %>
-            <div class="notice"><%= flash[:notice] %></div>
-          <% end %>
         </div>
       <% end %>
     </div>

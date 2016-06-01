@@ -26,12 +26,12 @@ class User < ActiveRecord::Base
       'class' => 'three'
     },
     {
-      'count' => 25,
+      'count' => 15,
       'html' => 'Verily journal with inspirational quote',
       'class' => 'four'
     },
     {
-      'count' => 50,
+      'count' => 20,
       'html' => 'Three small 5” x 5” Daily Dose wall prints',
       'class' => 'five'
     }
