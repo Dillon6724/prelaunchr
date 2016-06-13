@@ -10,11 +10,21 @@
     </div>
 
     <!-- TEMP -->
+
     <form action="/launch-list" method="post">
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <input type="text" name="launch_email" value="" placeholder="EMAIL">
       <input style="width:10%;" type="submit" name="name" value="SUBMIT">
     </form>
+    <% if flash[:notice] %>
+      <div style="    display: block;
+    text-align: center;
+    color: blueviolet;
+    border: 1px solid;
+    padding: 10px;"
+    class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
     <!-- <div class='signup_forms'>
       <% if Rails.application.config.ended %>
         <%= render "users/campaign_ended" %>

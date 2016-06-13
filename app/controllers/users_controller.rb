@@ -44,7 +44,6 @@ class UsersController < ApplicationController
   end
 
   def launch_list
-    print ENV["LAUNCH_LIST_ID"]
     email = params[:launch_email]
     begin
       gb = Gibbon::Request.new
@@ -56,9 +55,11 @@ class UsersController < ApplicationController
              FNAME: "Friend"
            }
       })
-
+    flash[:notice] = "Thanks for signing up! We'll send you an email soon with more instructions!"
     redirect_to root_path
+
     rescue Gibbon::MailChimpError => e
+      flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
       puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
       redirect_to root_path
     end
