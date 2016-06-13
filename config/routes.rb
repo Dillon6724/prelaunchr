@@ -13,6 +13,8 @@ Prelaunchr::Application.routes.draw do
   get 'faq' => 'users#faq'
   get 'swag' => 'users#swag'
 
+  post 'launch-list' => 'users#launch_list'
+
   get 'logout' => 'users#logout'
 
   resources :users, :only => [:show, :update, :edit]

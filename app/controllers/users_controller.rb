@@ -43,6 +43,34 @@ class UsersController < ApplicationController
     end
   end
 
+  def launch_list
+    print ENV["LAUNCH_LIST_ID"]
+    email = params[:launch_email]
+    begin
+      # gb = Gibbon::Request.new
+      gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
+        body: {
+          email_address: email,
+          status: "subscribed",
+           merge_fields: {
+             FNAME: "Friend"
+           }
+      })
+
+    # gb.lists.subscribe({
+    # :id => ENV["LAUNCH_LIST_ID"],
+    # :email => {:email => "email@email.com"},
+    # :double_optin => false
+    # })
+
+    redirect_to root_path
+    rescue Gibbon::MailChimpError => e
+      puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+      redirect_to root_path
+    end
+
+  end
+
   def refer
 
     @bodyId = 'refer'
