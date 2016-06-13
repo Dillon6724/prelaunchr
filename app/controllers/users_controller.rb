@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :skip_first_page, only: :new
 
   # will need to uncomment this method before launching in production
-  # before_filter :handle_ip, only: :create
+  before_filter :handle_ip, only: :create
 
   def new
     @bodyId = 'home'
