@@ -1,7 +1,7 @@
 class SubscribersController < InheritedResources::Base
 
   # will need to uncomment this method before launching in production
-  # before_filter :handle_ip, only: :create
+  before_filter :handle_ip, only: :create
 
   def new
     # this anti-cheating code seems to be giving inconsistent results. Disabling for now.
