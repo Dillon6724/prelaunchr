@@ -57,12 +57,6 @@ class UsersController < ApplicationController
            }
       })
 
-    # gb.lists.subscribe({
-    # :id => ENV["LAUNCH_LIST_ID"],
-    # :email => {:email => "email@email.com"},
-    # :double_optin => false
-    # })
-
     redirect_to root_path
     rescue Gibbon::MailChimpError => e
       puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
