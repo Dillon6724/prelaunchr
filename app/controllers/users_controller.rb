@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     print ENV["LAUNCH_LIST_ID"]
     email = params[:launch_email]
     begin
-      # gb = Gibbon::Request.new
+      gb = Gibbon::Request.new
       gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
         body: {
           email_address: email,
