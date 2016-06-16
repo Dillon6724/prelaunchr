@@ -70,7 +70,7 @@ class UsersController < ApplicationController
 
     @bodyId = 'refer'
     @is_mobile = mobile_device?
-    @user = User.find_by_email(cookies[:h_email] || params[:user][:email])
+    @user = User.find_by_email(params[:user][:email] || cookies[:h_email])
 
     respond_to do |format|
       if @user.nil?
