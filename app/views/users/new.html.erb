@@ -1,3 +1,8 @@
+<script type="text/javascript">
+
+</script>
+
+
 <section id='main'>
   <div class='verily_logo'>
     <%= image_tag "verily_logo.png" %>
@@ -11,7 +16,7 @@
 
     <!-- TEMP -->
 
-    <!-- <form action="/launch-list" method="post">
+    <form action="/launch-list" method="post">
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <input type="text" name="launch_email" value="" placeholder="EMAIL">
       <input style="width:10%;" type="submit" name="name" value="SUBMIT">
@@ -22,9 +27,30 @@
     color: blueviolet;
     padding: 10px;"
     class="notice"><%= flash[:notice] %></div>
-    <% end %> -->
+    <% end %>
 
-    <div class='signup_forms'>
+
+
+    <script>
+      var toggle = function() {
+      var mydiv = document.getElementById('newpost');
+      if (mydiv.style.display === 'block' || mydiv.style.display === '')
+        mydiv.style.display = 'none';
+      else
+        mydiv.style.display = 'block'
+      }
+    </script>
+    <input style="background: transparent;
+                  position: absolute;
+                  border: 1px solid rgb(207, 207, 207);
+                  top: -190px;
+                  left: -485px;
+                  height: 15px;
+                  width: 15px;
+                 "type="button" value="" onclick="toggle();">
+
+
+    <div id="newpost" style="display: none;" class='signup_forms'>
       <% if Rails.application.config.ended %>
         <%= render "users/campaign_ended" %>
       <% else %>
@@ -45,6 +71,8 @@
         </div>
       <% end %>
     </div>
+
+
     <div class='find_out_more'>
       <%= link_to "FIND OUT MORE", "faq.html" %>
     </div>

@@ -48,27 +48,27 @@ class UsersController < ApplicationController
   ########      THIS IS TEMP METHOD FOR GETTING LIST OF FUTURE VIPS      ##########
   #################################################################################
 
-  # def launch_list
-  #   email = params[:launch_email]
-  #   begin
-  #     gb = Gibbon::Request.new
-  #     gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
-  #       body: {
-  #         email_address: email,
-  #         status: "subscribed",
-  #          merge_fields: {
-  #            FNAME: "Friend"
-  #          }
-  #     })
-  #   flash[:notice] = "Thanks for signing up! We'll send you an email soon with more instructions!"
-  #   redirect_to root_path
-  #
-  #   rescue Gibbon::MailChimpError => e
-  #     flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
-  #     puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
-  #     redirect_to root_path
-  #   end
-  # end
+  def launch_list
+    email = params[:launch_email]
+    begin
+      gb = Gibbon::Request.new
+      gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
+        body: {
+          email_address: email,
+          status: "subscribed",
+           merge_fields: {
+             FNAME: "Friend"
+           }
+      })
+    flash[:notice] = "Thanks for signing up! We'll send you an email soon with more instructions!"
+    redirect_to root_path
+
+    rescue Gibbon::MailChimpError => e
+      flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
+      puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+      redirect_to root_path
+    end
+  end
 
   def refer
 
@@ -118,6 +118,8 @@ class UsersController < ApplicationController
     converted = Date.parse(@user.dob.to_s).strftime("%m/%y") if @user.dob
 
 
+## FIX THIS
+
     if @user.save
       begin
         @list_id = ENV["MAILCHIMP_LIST_ID"]
@@ -127,7 +129,7 @@ class UsersController < ApplicationController
           email_address: @user.email,
           status: "subscribed",
           merge_fields: {
-            FNAME: @user.first_name,
+            FNAME: @user.first_name,      ##ADD: || NONE
             LNAME: @user.last_name,
             DOB: converted,
             ADDRESS: @user.street_address,
