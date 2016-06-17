@@ -5,18 +5,19 @@ class UsersController < ApplicationController
   before_filter :handle_ip, only: :create
 
   def new
+    print "    * * * * * * * * * * * * * * * * NNNNNNNNNNEEEEEEEWWWWWWWWW * * * * * * * * * * * * * * * *    "
     @bodyId = 'home'
     @is_mobile = mobile_device?
 
     if params[:REF]
+      print params
       cookies[:h_ref] = { value: params[:REF]}
       redirect_to new_subscriber_url and return
-    elsif cookies[:h_ref]
-      redirect_to new_subscriber_url and return
+    # Caussing problems with redircecting when re logging in.
+    # elsif cookies[:h_ref]
+    #   redirect_to new_subscriber_url and return
     end
-
     @user = User.new
-
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
   def create
 
     ref_code = cookies[:h_ref].downcase if cookies[:h_ref]
-    email = params[:user][:email]
+    email = params[:user][:email].downcase
     first_name = params[:user][:first_name]
     last_name = params[:user][:last_name]
     print params
@@ -43,34 +44,37 @@ class UsersController < ApplicationController
     end
   end
 
-  def launch_list
-    email = params[:launch_email]
-    begin
-      gb = Gibbon::Request.new
-      gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
-        body: {
-          email_address: email,
-          status: "subscribed",
-           merge_fields: {
-             FNAME: "Friend"
-           }
-      })
-    flash[:notice] = "Thanks for signing up! We'll send you an email soon with more instructions!"
-    redirect_to root_path
 
-    rescue Gibbon::MailChimpError => e
-      flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
-      puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
-      redirect_to root_path
-    end
+  ########      THIS IS TEMP METHOD FOR GETTING LIST OF FUTURE VIPS      ##########
+  #################################################################################
 
-  end
+  # def launch_list
+  #   email = params[:launch_email]
+  #   begin
+  #     gb = Gibbon::Request.new
+  #     gb.lists(ENV["LAUNCH_LIST_ID"]).members.create(
+  #       body: {
+  #         email_address: email,
+  #         status: "subscribed",
+  #          merge_fields: {
+  #            FNAME: "Friend"
+  #          }
+  #     })
+  #   flash[:notice] = "Thanks for signing up! We'll send you an email soon with more instructions!"
+  #   redirect_to root_path
+  #
+  #   rescue Gibbon::MailChimpError => e
+  #     flash[:notice] = "Oops! Something went wrong. It could be that you forgot to enter some information, or that you already have an account associated with that email address. Please email vips@verilymag.com if you continue to experience issues."
+  #     puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+  #     redirect_to root_path
+  #   end
+  # end
 
   def refer
 
     @bodyId = 'refer'
     @is_mobile = mobile_device?
-    @user = User.find_by_email(params[:user][:email] || cookies[:h_email])
+    @user = User.find_by_email(params[:user][:email].downcase || cookies[:h_email].downcase)
 
     respond_to do |format|
       if @user.nil?
@@ -83,19 +87,21 @@ class UsersController < ApplicationController
     end
   end
 
+
   def show
     if params[:id]
       @user = User.find(params[:id])
     else
-      @user = User.find_by_email(cookies[:h_email])
+      @user = User.find_by_email(cookies[:h_email].downcase)
     end
   end
+
 
   def update
     if params[:id]
       @user = User.find(params[:id])
     else
-      @user = User.find_by_email(cookies[:h_email])
+      @user = User.find_by_email(cookies[:h_email].downcase)
     end
 
     @user.email = params[:user][:email]
@@ -148,13 +154,17 @@ class UsersController < ApplicationController
     end
   end
 
+
+
   def edit
     @user = User.find(params[:id])
   end
 
+
+
   def faq
     if cookies[:h_email]
-      @user = User.find_by_email(cookies[:h_email])
+      @user = User.find_by_email(cookies[:h_email].downcase)
       @is_user = true
       @potential_user = false
       @potential_subscriber = false
@@ -173,24 +183,27 @@ class UsersController < ApplicationController
   end
 
   def swag
-
-
   end
+
+
 
   def redirect
     redirect_to root_path, status: 404
   end
+
+
 
   def logout
     cookies.delete :h_email
     redirect_to root_path
   end
 
+
+
   private
 
   def skip_first_page
     return if Rails.application.config.ended
-
     email = cookies[:h_email]
     if email && User.find_by_email(email)
       redirect_to '/refer-a-friend'
