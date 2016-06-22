@@ -558,18 +558,18 @@ aside h4{
     h1 {
       color: #1c4677;
       font-family: "proxima-nova";
-      font-size: 15px;
+      font-size: 20px;
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 10px;
     }
     p {
       font-family: "freight-big-pro";
-      font-size: 13px;
+      font-size: 17px;
       color: black;
       letter-spacing: 2px;
       margin-bottom: 20px;
-      line-height: 1.7;
+      line-height: 1.5;
     }
   }
   .buttons {
@@ -665,8 +665,11 @@ aside h4{
 }
 
 .edit_user .state {
-  width: 1.9em;
+  width: 2.9em;
   text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+
 }
 
 .edit_user .zip {
@@ -913,7 +916,7 @@ select {
   }
 
   .swag-description {
-    font-family: "proxima-nova", sans-serif !important;
+    font-family: "freight-big-pro";
     text-transform: initial;
     margin-bottom: 20px;
   }

@@ -545,8 +545,8 @@ html.home{
 	font-weight: bold;
 	font-family: "proxima-nova";
 	letter-spacing: 2.5px;
-	text-align: left;
-	margin-left: 40%;
+	text-align: center;
+	margin-right: 4%;
 }
 
 #show .user-details {
@@ -568,11 +568,11 @@ html.home{
 }
 
 #show .edit-button {
-	text-align: left;
+	text-align: center;
 	clear: both;
 	margin-top: 20px;
 	margin-bottom: 70px;
-	margin-left: 40%;
+	font-family: "proxima-nova";
 	a {
 		padding: 10px 30px 10px 30px;
 		text-transform: uppercase;
@@ -641,7 +641,8 @@ html.home{
 
 .header_nav ul li {
 	display: inline;
-	margin-right: 8%;
+	margin-right: 2%;
+	text-align: right;
 }
 
 .header_nav a {

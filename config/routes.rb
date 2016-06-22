@@ -4,14 +4,16 @@ Prelaunchr::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to => "users#new"
+
 
   post 'users/create' => 'users#create'
   get 'refer-a-friend' => 'users#refer'
-
   post 'refer-a-friend' => 'users#refer'
+
   get 'faq' => 'users#faq'
   get 'swag' => 'users#swag'
+
+  root "users#new"
 
   post 'launch-list' => 'users#launch_list'
 
