@@ -546,7 +546,6 @@ html.home{
 	font-family: "proxima-nova";
 	letter-spacing: 2.5px;
 	text-align: center;
-	margin-right: 4%;
 }
 
 #show .user-details {
@@ -563,15 +562,14 @@ html.home{
 .user-info li {
 	list-style: none;
 	line-height: 1.5em;
-	text-align: left;
-	margin-left: 24%;
+	display: block;
+	text-align: center;
 }
 
 #show .edit-button {
 	text-align: center;
 	clear: both;
-	margin-top: 20px;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 	font-family: "proxima-nova";
 	a {
 		padding: 10px 30px 10px 30px;
